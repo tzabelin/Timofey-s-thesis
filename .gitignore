@@ -2,8 +2,9 @@
 .vscode/
 
 # Ignore checkpoint and output files
-checkpoint_rank*.dat
 partial-restart.out
+*.dat
+outputs
 
 # Ignore compiled binary files
 *.o
