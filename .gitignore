@@ -1,0 +1,37 @@
+# Ignore VS Code settings
+.vscode/
+
+# Ignore checkpoint and output files
+checkpoint_rank*.dat
+partial-restart.out
+
+# Ignore compiled binary files
+*.o
+*.out
+*.exe
+*.bin
+
+# Ignore temporary and log files
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Ignore hostfile if it's generated dynamically
+hostfile
+
+# Ignore compiled objects and cache
+*.obj
+*.so
+*.dll
+*.a
+*.lib
+
+# Ignore shell script execution logs
+*.sh~
+
+# Ignore any hidden system files (common in some environments)
+.DS_Store
+Thumbs.db
+
+openmpi-ulfm/
