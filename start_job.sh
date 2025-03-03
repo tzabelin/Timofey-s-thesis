@@ -5,7 +5,7 @@ attempt=0
 
 while [ $attempt -lt $max_restarts ]; do
     echo "=== Starting attempt #$((attempt+1)) ==="
-    mpirun --with-ft ulfm -n 2 ./checkpoint-restart.out
+    mpirun -n 2 ./checkpoint-restart.out
     rc=$?
     if [ $rc -eq 0 ]; then
         echo "=== Job completed successfully! ==="
