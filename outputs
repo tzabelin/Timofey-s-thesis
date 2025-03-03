@@ -1,0 +1,1358 @@
+=== Starting attempt #1 ===
+[17-42-13] Rank 1 (PID 25484) started with counter = 1
+[17-42-13] Rank 0 (PID 25483) started with counter = 0
+[17-42-13] Rank 1 (PID 25484): my counter=1, left(rank 0)=0, right(rank 0)=0
+[17-42-13] Rank 0 (PID 25483): my counter=0, left(rank 1)=1, right(rank 1)=1
+[17-42-14] Rank 1 (PID 25484): my counter=3, left(rank 0)=2, right(rank 0)=2
+[17-42-14] Rank 0 (PID 25483): my counter=2, left(rank 1)=3, right(rank 1)=3
+[17-42-15] Rank 0 (PID 25483): my counter=4, left(rank 1)=5, right(rank 1)=5
+[17-42-15] Rank 1 (PID 25484): my counter=5, left(rank 0)=4, right(rank 0)=4
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #2 ===
+[17-42-17] Rank 0 (PID 25499) started with counter = 0
+[17-42-17] Rank 1 (PID 25500) started with counter = 1
+[17-42-17] Rank 0 (PID 25499): my counter=0, left(rank 1)=1, right(rank 1)=1
+[17-42-17] Rank 1 (PID 25500): my counter=1, left(rank 0)=0, right(rank 0)=0
+[17-42-18] Rank 0 (PID 25499): my counter=2, left(rank 1)=3, right(rank 1)=3
+[17-42-18] Rank 1 (PID 25500): my counter=3, left(rank 0)=2, right(rank 0)=2
+[17-42-19] Rank 0 (PID 25499): my counter=4, left(rank 1)=5, right(rank 1)=5
+[17-42-19] Rank 1 (PID 25500): my counter=5, left(rank 0)=4, right(rank 0)=4
+[17-42-20] Rank 0 (PID 25499): my counter=6, left(rank 1)=7, right(rank 1)=7
+[17-42-20] Rank 1 (PID 25500): my counter=7, left(rank 0)=6, right(rank 0)=6
+[17-42-21] Rank 0 (PID 25499): my counter=8, left(rank 1)=9, right(rank 1)=9
+[17-42-21] Rank 1 (PID 25500): my counter=9, left(rank 0)=8, right(rank 0)=8
+Rank 1: Checkpoint saved (counter = 11) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 10) to checkpoint_rank0.dat
+[17-42-22] Rank 1 (PID 25500): my counter=11, left(rank 0)=10, right(rank 0)=10
+[17-42-22] Rank 0 (PID 25499): my counter=10, left(rank 1)=11, right(rank 1)=11
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #3 ===
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 11)
+[17-42-24] Rank 1 (PID 25532) started with counter = 11
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 10)
+[17-42-24] Rank 0 (PID 25530) started with counter = 10
+[17-42-24] Rank 0 (PID 25530): my counter=10, left(rank 1)=11, right(rank 1)=11
+[17-42-24] Rank 1 (PID 25532): my counter=11, left(rank 0)=10, right(rank 0)=10
+[17-42-25] Rank 0 (PID 25530): my counter=12, left(rank 1)=13, right(rank 1)=13
+[17-42-25] Rank 1 (PID 25532): my counter=13, left(rank 0)=12, right(rank 0)=12
+[17-42-26] Rank 0 (PID 25530): my counter=14, left(rank 1)=15, right(rank 1)=15
+[17-42-26] Rank 1 (PID 25532): my counter=15, left(rank 0)=14, right(rank 0)=14
+[17-42-27] Rank 0 (PID 25530): my counter=16, left(rank 1)=17, right(rank 1)=17
+[17-42-27] Rank 1 (PID 25532): my counter=17, left(rank 0)=16, right(rank 0)=16
+[17-42-28] Rank 1 (PID 25532): my counter=19, left(rank 0)=18, right(rank 0)=18
+[17-42-28] Rank 0 (PID 25530): my counter=18, left(rank 1)=19, right(rank 1)=19
+Rank 0: Checkpoint saved (counter = 20) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 21) to checkpoint_rank1.dat
+[17-42-29] Rank 0 (PID 25530): my counter=20, left(rank 1)=21, right(rank 1)=21
+[17-42-29] Rank 1 (PID 25532): my counter=21, left(rank 0)=20, right(rank 0)=20
+[17-42-30] Rank 0 (PID 25530): my counter=22, left(rank 1)=23, right(rank 1)=23
+[17-42-30] Rank 1 (PID 25532): my counter=23, left(rank 0)=22, right(rank 0)=22
+[17-42-31] Rank 0 (PID 25530): my counter=24, left(rank 1)=25, right(rank 1)=25
+[17-42-31] Rank 1 (PID 25532): my counter=25, left(rank 0)=24, right(rank 0)=24
+[17-42-32] Rank 0 (PID 25530): my counter=26, left(rank 1)=27, right(rank 1)=27
+[17-42-32] Rank 1 (PID 25532): my counter=27, left(rank 0)=26, right(rank 0)=26
+[17-42-33] Rank 0 (PID 25530): my counter=28, left(rank 1)=29, right(rank 1)=29
+[17-42-33] Rank 1 (PID 25532): my counter=29, left(rank 0)=28, right(rank 0)=28
+Rank 0: Checkpoint saved (counter = 30) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 31) to checkpoint_rank1.dat
+[17-42-34] Rank 1 (PID 25532): my counter=31, left(rank 0)=30, right(rank 0)=30
+[17-42-34] Rank 0 (PID 25530): my counter=30, left(rank 1)=31, right(rank 1)=31
+[17-42-35] Rank 0 (PID 25530): my counter=32, left(rank 1)=33, right(rank 1)=33
+[17-42-35] Rank 1 (PID 25532): my counter=33, left(rank 0)=32, right(rank 0)=32
+[17-42-36] Rank 0 (PID 25530): my counter=34, left(rank 1)=35, right(rank 1)=35
+[17-42-36] Rank 1 (PID 25532): my counter=35, left(rank 0)=34, right(rank 0)=34
+[17-42-37] Rank 0 (PID 25530): my counter=36, left(rank 1)=37, right(rank 1)=37
+[17-42-37] Rank 1 (PID 25532): my counter=37, left(rank 0)=36, right(rank 0)=36
+[17-42-38] Rank 0 (PID 25530): my counter=38, left(rank 1)=39, right(rank 1)=39
+[17-42-38] Rank 1 (PID 25532): my counter=39, left(rank 0)=38, right(rank 0)=38
+Rank 0: Checkpoint saved (counter = 40) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 41) to checkpoint_rank1.dat
+[17-42-39] Rank 1 (PID 25532): my counter=41, left(rank 0)=40, right(rank 0)=40
+[17-42-39] Rank 0 (PID 25530): my counter=40, left(rank 1)=41, right(rank 1)=41
+[17-42-40] Rank 0 (PID 25530): my counter=42, left(rank 1)=43, right(rank 1)=43
+[17-42-40] Rank 1 (PID 25532): my counter=43, left(rank 0)=42, right(rank 0)=42
+[17-42-41] Rank 0 (PID 25530): my counter=44, left(rank 1)=45, right(rank 1)=45
+[17-42-41] Rank 1 (PID 25532): my counter=45, left(rank 0)=44, right(rank 0)=44
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #4 ===
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 40)
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 41)
+[17-42-43] Rank 1 (PID 25567) started with counter = 41
+[17-42-43] Rank 0 (PID 25566) started with counter = 40
+[17-42-43] Rank 0 (PID 25566): my counter=40, left(rank 1)=41, right(rank 1)=41
+[17-42-43] Rank 1 (PID 25567): my counter=41, left(rank 0)=40, right(rank 0)=40
+[17-42-44] Rank 0 (PID 25566): my counter=42, left(rank 1)=43, right(rank 1)=43
+[17-42-44] Rank 1 (PID 25567): my counter=43, left(rank 0)=42, right(rank 0)=42
+[17-42-45] Rank 0 (PID 25566): my counter=44, left(rank 1)=45, right(rank 1)=45
+[17-42-45] Rank 1 (PID 25567): my counter=45, left(rank 0)=44, right(rank 0)=44
+[17-42-46] Rank 0 (PID 25566): my counter=46, left(rank 1)=47, right(rank 1)=47
+[17-42-46] Rank 1 (PID 25567): my counter=47, left(rank 0)=46, right(rank 0)=46
+[17-42-47] Rank 0 (PID 25566): my counter=48, left(rank 1)=49, right(rank 1)=49
+[17-42-47] Rank 1 (PID 25567): my counter=49, left(rank 0)=48, right(rank 0)=48
+Rank 0: Checkpoint saved (counter = 50) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 51) to checkpoint_rank1.dat
+[17-42-48] Rank 0 (PID 25566): my counter=50, left(rank 1)=51, right(rank 1)=51
+[17-42-48] Rank 1 (PID 25567): my counter=51, left(rank 0)=50, right(rank 0)=50
+[17-42-49] Rank 0 (PID 25566): my counter=52, left(rank 1)=53, right(rank 1)=53
+[17-42-49] Rank 1 (PID 25567): my counter=53, left(rank 0)=52, right(rank 0)=52
+[17-42-50] Rank 0 (PID 25566): my counter=54, left(rank 1)=55, right(rank 1)=55
+[17-42-50] Rank 1 (PID 25567): my counter=55, left(rank 0)=54, right(rank 0)=54
+[17-42-51] Rank 0 (PID 25566): my counter=56, left(rank 1)=57, right(rank 1)=57
+[17-42-51] Rank 1 (PID 25567): my counter=57, left(rank 0)=56, right(rank 0)=56
+[17-42-52] Rank 0 (PID 25566): my counter=58, left(rank 1)=59, right(rank 1)=59
+[17-42-52] Rank 1 (PID 25567): my counter=59, left(rank 0)=58, right(rank 0)=58
+Rank 0: Checkpoint saved (counter = 60) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 61) to checkpoint_rank1.dat
+[17-42-53] Rank 0 (PID 25566): my counter=60, left(rank 1)=61, right(rank 1)=61
+[17-42-53] Rank 1 (PID 25567): my counter=61, left(rank 0)=60, right(rank 0)=60
+[17-42-54] Rank 0 (PID 25566): my counter=62, left(rank 1)=63, right(rank 1)=63
+[17-42-54] Rank 1 (PID 25567): my counter=63, left(rank 0)=62, right(rank 0)=62
+[17-42-55] Rank 1 (PID 25567): my counter=65, left(rank 0)=64, right(rank 0)=64
+[17-42-55] Rank 0 (PID 25566): my counter=64, left(rank 1)=65, right(rank 1)=65
+[17-42-56] Rank 1 (PID 25567): my counter=67, left(rank 0)=66, right(rank 0)=66
+[17-42-56] Rank 0 (PID 25566): my counter=66, left(rank 1)=67, right(rank 1)=67
+[17-42-57] Rank 1 (PID 25567): my counter=69, left(rank 0)=68, right(rank 0)=68
+[17-42-57] Rank 0 (PID 25566): my counter=68, left(rank 1)=69, right(rank 1)=69
+Rank 0: Checkpoint saved (counter = 70) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 71) to checkpoint_rank1.dat
+[17-42-58] Rank 0 (PID 25566): my counter=70, left(rank 1)=71, right(rank 1)=71
+[17-42-58] Rank 1 (PID 25567): my counter=71, left(rank 0)=70, right(rank 0)=70
+[17-42-59] Rank 0 (PID 25566): my counter=72, left(rank 1)=73, right(rank 1)=73
+[17-42-59] Rank 1 (PID 25567): my counter=73, left(rank 0)=72, right(rank 0)=72
+[17-43-00] Rank 0 (PID 25566): my counter=74, left(rank 1)=75, right(rank 1)=75
+[17-43-00] Rank 1 (PID 25567): my counter=75, left(rank 0)=74, right(rank 0)=74
+[17-43-01] Rank 1 (PID 25567): my counter=77, left(rank 0)=76, right(rank 0)=76
+[17-43-01] Rank 0 (PID 25566): my counter=76, left(rank 1)=77, right(rank 1)=77
+[17-43-02] Rank 1 (PID 25567): my counter=79, left(rank 0)=78, right(rank 0)=78
+[17-43-02] Rank 0 (PID 25566): my counter=78, left(rank 1)=79, right(rank 1)=79
+Rank 0: Checkpoint saved (counter = 80) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 81) to checkpoint_rank1.dat
+[17-43-03] Rank 0 (PID 25566): my counter=80, left(rank 1)=81, right(rank 1)=81
+[17-43-03] Rank 1 (PID 25567): my counter=81, left(rank 0)=80, right(rank 0)=80
+[17-43-04] Rank 0 (PID 25566): my counter=82, left(rank 1)=83, right(rank 1)=83
+[17-43-04] Rank 1 (PID 25567): my counter=83, left(rank 0)=82, right(rank 0)=82
+[17-43-05] Rank 0 (PID 25566): my counter=84, left(rank 1)=85, right(rank 1)=85
+[17-43-05] Rank 1 (PID 25567): my counter=85, left(rank 0)=84, right(rank 0)=84
+[17-43-06] Rank 0 (PID 25566): my counter=86, left(rank 1)=87, right(rank 1)=87
+[17-43-06] Rank 1 (PID 25567): my counter=87, left(rank 0)=86, right(rank 0)=86
+[17-43-07] Rank 0 (PID 25566): my counter=88, left(rank 1)=89, right(rank 1)=89
+[17-43-07] Rank 1 (PID 25567): my counter=89, left(rank 0)=88, right(rank 0)=88
+Rank 0: Checkpoint saved (counter = 90) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 91) to checkpoint_rank1.dat
+[17-43-08] Rank 0 (PID 25566): my counter=90, left(rank 1)=91, right(rank 1)=91
+[17-43-08] Rank 1 (PID 25567): my counter=91, left(rank 0)=90, right(rank 0)=90
+[17-43-09] Rank 0 (PID 25566): my counter=92, left(rank 1)=93, right(rank 1)=93
+[17-43-09] Rank 1 (PID 25567): my counter=93, left(rank 0)=92, right(rank 0)=92
+[17-43-10] Rank 0 (PID 25566): my counter=94, left(rank 1)=95, right(rank 1)=95
+[17-43-10] Rank 1 (PID 25567): my counter=95, left(rank 0)=94, right(rank 0)=94
+[17-43-11] Rank 0 (PID 25566): my counter=96, left(rank 1)=97, right(rank 1)=97
+[17-43-11] Rank 1 (PID 25567): my counter=97, left(rank 0)=96, right(rank 0)=96
+[17-43-12] Rank 0 (PID 25566): my counter=98, left(rank 1)=99, right(rank 1)=99
+[17-43-12] Rank 1 (PID 25567): my counter=99, left(rank 0)=98, right(rank 0)=98
+Rank 0: Checkpoint saved (counter = 100) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 101) to checkpoint_rank1.dat
+[17-43-13] Rank 0 (PID 25566): my counter=100, left(rank 1)=101, right(rank 1)=101
+[17-43-13] Rank 1 (PID 25567): my counter=101, left(rank 0)=100, right(rank 0)=100
+[17-43-14] Rank 0 (PID 25566): my counter=102, left(rank 1)=103, right(rank 1)=103
+[17-43-14] Rank 1 (PID 25567): my counter=103, left(rank 0)=102, right(rank 0)=102
+[17-43-15] Rank 0 (PID 25566): my counter=104, left(rank 1)=105, right(rank 1)=105
+[17-43-15] Rank 1 (PID 25567): my counter=105, left(rank 0)=104, right(rank 0)=104
+[17-43-16] Rank 0 (PID 25566): my counter=106, left(rank 1)=107, right(rank 1)=107
+[17-43-16] Rank 1 (PID 25567): my counter=107, left(rank 0)=106, right(rank 0)=106
+[17-43-17] Rank 0 (PID 25566): my counter=108, left(rank 1)=109, right(rank 1)=109
+[17-43-17] Rank 1 (PID 25567): my counter=109, left(rank 0)=108, right(rank 0)=108
+Rank 1: Checkpoint saved (counter = 111) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 110) to checkpoint_rank0.dat
+[17-43-18] Rank 1 (PID 25567): my counter=111, left(rank 0)=110, right(rank 0)=110
+[17-43-18] Rank 0 (PID 25566): my counter=110, left(rank 1)=111, right(rank 1)=111
+[17-43-19] Rank 1 (PID 25567): my counter=113, left(rank 0)=112, right(rank 0)=112
+[17-43-19] Rank 0 (PID 25566): my counter=112, left(rank 1)=113, right(rank 1)=113
+[17-43-20] Rank 1 (PID 25567): my counter=115, left(rank 0)=114, right(rank 0)=114
+[17-43-20] Rank 0 (PID 25566): my counter=114, left(rank 1)=115, right(rank 1)=115
+[17-43-21] Rank 1 (PID 25567): my counter=117, left(rank 0)=116, right(rank 0)=116
+[17-43-21] Rank 0 (PID 25566): my counter=116, left(rank 1)=117, right(rank 1)=117
+[17-43-22] Rank 1 (PID 25567): my counter=119, left(rank 0)=118, right(rank 0)=118
+[17-43-22] Rank 0 (PID 25566): my counter=118, left(rank 1)=119, right(rank 1)=119
+Rank 0: Checkpoint saved (counter = 120) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 121) to checkpoint_rank1.dat
+[17-43-23] Rank 0 (PID 25566): my counter=120, left(rank 1)=121, right(rank 1)=121
+[17-43-23] Rank 1 (PID 25567): my counter=121, left(rank 0)=120, right(rank 0)=120
+[17-43-24] Rank 1 (PID 25567): my counter=123, left(rank 0)=122, right(rank 0)=122
+[17-43-24] Rank 0 (PID 25566): my counter=122, left(rank 1)=123, right(rank 1)=123
+[17-43-25] Rank 1 (PID 25567): my counter=125, left(rank 0)=124, right(rank 0)=124
+[17-43-25] Rank 0 (PID 25566): my counter=124, left(rank 1)=125, right(rank 1)=125
+[17-43-26] Rank 1 (PID 25567): my counter=127, left(rank 0)=126, right(rank 0)=126
+[17-43-26] Rank 0 (PID 25566): my counter=126, left(rank 1)=127, right(rank 1)=127
+[17-43-27] Rank 1 (PID 25567): my counter=129, left(rank 0)=128, right(rank 0)=128
+[17-43-27] Rank 0 (PID 25566): my counter=128, left(rank 1)=129, right(rank 1)=129
+Rank 1: Checkpoint saved (counter = 131) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 130) to checkpoint_rank0.dat
+[17-43-28] Rank 0 (PID 25566): my counter=130, left(rank 1)=131, right(rank 1)=131
+[17-43-28] Rank 1 (PID 25567): my counter=131, left(rank 0)=130, right(rank 0)=130
+[17-43-29] Rank 0 (PID 25566): my counter=132, left(rank 1)=133, right(rank 1)=133
+[17-43-29] Rank 1 (PID 25567): my counter=133, left(rank 0)=132, right(rank 0)=132
+[17-43-30] Rank 0 (PID 25566): my counter=134, left(rank 1)=135, right(rank 1)=135
+[17-43-30] Rank 1 (PID 25567): my counter=135, left(rank 0)=134, right(rank 0)=134
+[17-43-31] Rank 0 (PID 25566): my counter=136, left(rank 1)=137, right(rank 1)=137
+[17-43-31] Rank 1 (PID 25567): my counter=137, left(rank 0)=136, right(rank 0)=136
+[17-43-32] Rank 0 (PID 25566): my counter=138, left(rank 1)=139, right(rank 1)=139
+[17-43-32] Rank 1 (PID 25567): my counter=139, left(rank 0)=138, right(rank 0)=138
+Rank 1: Checkpoint saved (counter = 141) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 140) to checkpoint_rank0.dat
+[17-43-33] Rank 1 (PID 25567): my counter=141, left(rank 0)=140, right(rank 0)=140
+[17-43-33] Rank 0 (PID 25566): my counter=140, left(rank 1)=141, right(rank 1)=141
+[17-43-34] Rank 0 (PID 25566): my counter=142, left(rank 1)=143, right(rank 1)=143
+[17-43-34] Rank 1 (PID 25567): my counter=143, left(rank 0)=142, right(rank 0)=142
+[17-43-35] Rank 0 (PID 25566): my counter=144, left(rank 1)=145, right(rank 1)=145
+[17-43-35] Rank 1 (PID 25567): my counter=145, left(rank 0)=144, right(rank 0)=144
+[17-43-36] Rank 0 (PID 25566): my counter=146, left(rank 1)=147, right(rank 1)=147
+[17-43-36] Rank 1 (PID 25567): my counter=147, left(rank 0)=146, right(rank 0)=146
+[17-43-37] Rank 0 (PID 25566): my counter=148, left(rank 1)=149, right(rank 1)=149
+[17-43-37] Rank 1 (PID 25567): my counter=149, left(rank 0)=148, right(rank 0)=148
+Rank 0: Checkpoint saved (counter = 150) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 151) to checkpoint_rank1.dat
+[17-43-38] Rank 0 (PID 25566): my counter=150, left(rank 1)=151, right(rank 1)=151
+[17-43-38] Rank 1 (PID 25567): my counter=151, left(rank 0)=150, right(rank 0)=150
+[17-43-39] Rank 0 (PID 25566): my counter=152, left(rank 1)=153, right(rank 1)=153
+[17-43-39] Rank 1 (PID 25567): my counter=153, left(rank 0)=152, right(rank 0)=152
+[17-43-40] Rank 0 (PID 25566): my counter=154, left(rank 1)=155, right(rank 1)=155
+[17-43-40] Rank 1 (PID 25567): my counter=155, left(rank 0)=154, right(rank 0)=154
+[17-43-41] Rank 0 (PID 25566): my counter=156, left(rank 1)=157, right(rank 1)=157
+[17-43-41] Rank 1 (PID 25567): my counter=157, left(rank 0)=156, right(rank 0)=156
+[17-43-42] Rank 0 (PID 25566): my counter=158, left(rank 1)=159, right(rank 1)=159
+[17-43-42] Rank 1 (PID 25567): my counter=159, left(rank 0)=158, right(rank 0)=158
+Rank 0: Checkpoint saved (counter = 160) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 161) to checkpoint_rank1.dat
+[17-43-43] Rank 1 (PID 25567): my counter=161, left(rank 0)=160, right(rank 0)=160
+[17-43-43] Rank 0 (PID 25566): my counter=160, left(rank 1)=161, right(rank 1)=161
+[17-43-44] Rank 1 (PID 25567): my counter=163, left(rank 0)=162, right(rank 0)=162
+[17-43-44] Rank 0 (PID 25566): my counter=162, left(rank 1)=163, right(rank 1)=163
+[17-43-45] Rank 1 (PID 25567): my counter=165, left(rank 0)=164, right(rank 0)=164
+[17-43-45] Rank 0 (PID 25566): my counter=164, left(rank 1)=165, right(rank 1)=165
+[17-43-46] Rank 1 (PID 25567): my counter=167, left(rank 0)=166, right(rank 0)=166
+[17-43-46] Rank 0 (PID 25566): my counter=166, left(rank 1)=167, right(rank 1)=167
+[17-43-47] Rank 1 (PID 25567): my counter=169, left(rank 0)=168, right(rank 0)=168
+[17-43-47] Rank 0 (PID 25566): my counter=168, left(rank 1)=169, right(rank 1)=169
+Rank 1: Checkpoint saved (counter = 171) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 170) to checkpoint_rank0.dat
+[17-43-48] Rank 1 (PID 25567): my counter=171, left(rank 0)=170, right(rank 0)=170
+[17-43-48] Rank 0 (PID 25566): my counter=170, left(rank 1)=171, right(rank 1)=171
+[17-43-49] Rank 1 (PID 25567): my counter=173, left(rank 0)=172, right(rank 0)=172
+[17-43-49] Rank 0 (PID 25566): my counter=172, left(rank 1)=173, right(rank 1)=173
+[17-43-50] Rank 1 (PID 25567): my counter=175, left(rank 0)=174, right(rank 0)=174
+[17-43-50] Rank 0 (PID 25566): my counter=174, left(rank 1)=175, right(rank 1)=175
+[17-43-51] Rank 1 (PID 25567): my counter=177, left(rank 0)=176, right(rank 0)=176
+[17-43-51] Rank 0 (PID 25566): my counter=176, left(rank 1)=177, right(rank 1)=177
+[17-43-52] Rank 1 (PID 25567): my counter=179, left(rank 0)=178, right(rank 0)=178
+[17-43-52] Rank 0 (PID 25566): my counter=178, left(rank 1)=179, right(rank 1)=179
+Rank 1: Checkpoint saved (counter = 181) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 180) to checkpoint_rank0.dat
+[17-43-53] Rank 1 (PID 25567): my counter=181, left(rank 0)=180, right(rank 0)=180
+[17-43-53] Rank 0 (PID 25566): my counter=180, left(rank 1)=181, right(rank 1)=181
+[17-43-54] Rank 1 (PID 25567): my counter=183, left(rank 0)=182, right(rank 0)=182
+[17-43-54] Rank 0 (PID 25566): my counter=182, left(rank 1)=183, right(rank 1)=183
+[17-43-55] Rank 0 (PID 25566): my counter=184, left(rank 1)=185, right(rank 1)=185
+[17-43-55] Rank 1 (PID 25567): my counter=185, left(rank 0)=184, right(rank 0)=184
+[17-43-56] Rank 0 (PID 25566): my counter=186, left(rank 1)=187, right(rank 1)=187
+[17-43-56] Rank 1 (PID 25567): my counter=187, left(rank 0)=186, right(rank 0)=186
+[17-43-57] Rank 0 (PID 25566): my counter=188, left(rank 1)=189, right(rank 1)=189
+[17-43-57] Rank 1 (PID 25567): my counter=189, left(rank 0)=188, right(rank 0)=188
+Rank 0: Checkpoint saved (counter = 190) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 191) to checkpoint_rank1.dat
+[17-43-58] Rank 0 (PID 25566): my counter=190, left(rank 1)=191, right(rank 1)=191
+[17-43-58] Rank 1 (PID 25567): my counter=191, left(rank 0)=190, right(rank 0)=190
+[17-43-59] Rank 0 (PID 25566): my counter=192, left(rank 1)=193, right(rank 1)=193
+[17-43-59] Rank 1 (PID 25567): my counter=193, left(rank 0)=192, right(rank 0)=192
+[17-44-00] Rank 0 (PID 25566): my counter=194, left(rank 1)=195, right(rank 1)=195
+[17-44-00] Rank 1 (PID 25567): my counter=195, left(rank 0)=194, right(rank 0)=194
+[17-44-01] Rank 0 (PID 25566): my counter=196, left(rank 1)=197, right(rank 1)=197
+[17-44-01] Rank 1 (PID 25567): my counter=197, left(rank 0)=196, right(rank 0)=196
+[17-44-02] Rank 1 (PID 25567): my counter=199, left(rank 0)=198, right(rank 0)=198
+[17-44-02] Rank 0 (PID 25566): my counter=198, left(rank 1)=199, right(rank 1)=199
+Rank 0: Checkpoint saved (counter = 200) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 201) to checkpoint_rank1.dat
+[17-44-03] Rank 1 (PID 25567): my counter=201, left(rank 0)=200, right(rank 0)=200
+[17-44-03] Rank 0 (PID 25566): my counter=200, left(rank 1)=201, right(rank 1)=201
+[17-44-04] Rank 1 (PID 25567): my counter=203, left(rank 0)=202, right(rank 0)=202
+[17-44-04] Rank 0 (PID 25566): my counter=202, left(rank 1)=203, right(rank 1)=203
+[17-44-05] Rank 1 (PID 25567): my counter=205, left(rank 0)=204, right(rank 0)=204
+[17-44-05] Rank 0 (PID 25566): my counter=204, left(rank 1)=205, right(rank 1)=205
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #5 ===
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 200)
+[17-44-06] Rank 0 (PID 25712) started with counter = 200
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 201)
+[17-44-06] Rank 1 (PID 25713) started with counter = 201
+[17-44-06] Rank 1 (PID 25713): my counter=201, left(rank 0)=200, right(rank 0)=200
+[17-44-06] Rank 0 (PID 25712): my counter=200, left(rank 1)=201, right(rank 1)=201
+[17-44-07] Rank 1 (PID 25713): my counter=203, left(rank 0)=202, right(rank 0)=202
+[17-44-07] Rank 0 (PID 25712): my counter=202, left(rank 1)=203, right(rank 1)=203
+[17-44-08] Rank 1 (PID 25713): my counter=205, left(rank 0)=204, right(rank 0)=204
+[17-44-08] Rank 0 (PID 25712): my counter=204, left(rank 1)=205, right(rank 1)=205
+[17-44-09] Rank 1 (PID 25713): my counter=207, left(rank 0)=206, right(rank 0)=206
+[17-44-09] Rank 0 (PID 25712): my counter=206, left(rank 1)=207, right(rank 1)=207
+[17-44-10] Rank 0 (PID 25712): my counter=208, left(rank 1)=209, right(rank 1)=209
+[17-44-10] Rank 1 (PID 25713): my counter=209, left(rank 0)=208, right(rank 0)=208
+Rank 0: Checkpoint saved (counter = 210) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 211) to checkpoint_rank1.dat
+[17-44-11] Rank 0 (PID 25712): my counter=210, left(rank 1)=211, right(rank 1)=211
+[17-44-11] Rank 1 (PID 25713): my counter=211, left(rank 0)=210, right(rank 0)=210
+[17-44-12] Rank 0 (PID 25712): my counter=212, left(rank 1)=213, right(rank 1)=213
+[17-44-12] Rank 1 (PID 25713): my counter=213, left(rank 0)=212, right(rank 0)=212
+[17-44-13] Rank 0 (PID 25712): my counter=214, left(rank 1)=215, right(rank 1)=215
+[17-44-13] Rank 1 (PID 25713): my counter=215, left(rank 0)=214, right(rank 0)=214
+[17-44-14] Rank 0 (PID 25712): my counter=216, left(rank 1)=217, right(rank 1)=217
+[17-44-14] Rank 1 (PID 25713): my counter=217, left(rank 0)=216, right(rank 0)=216
+[17-44-15] Rank 0 (PID 25712): my counter=218, left(rank 1)=219, right(rank 1)=219
+[17-44-15] Rank 1 (PID 25713): my counter=219, left(rank 0)=218, right(rank 0)=218
+Rank 1: Checkpoint saved (counter = 221) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 220) to checkpoint_rank0.dat
+[17-44-16] Rank 1 (PID 25713): my counter=221, left(rank 0)=220, right(rank 0)=220
+[17-44-16] Rank 0 (PID 25712): my counter=220, left(rank 1)=221, right(rank 1)=221
+[17-44-17] Rank 0 (PID 25712): my counter=222, left(rank 1)=223, right(rank 1)=223
+[17-44-17] Rank 1 (PID 25713): my counter=223, left(rank 0)=222, right(rank 0)=222
+[17-44-18] Rank 0 (PID 25712): my counter=224, left(rank 1)=225, right(rank 1)=225
+[17-44-18] Rank 1 (PID 25713): my counter=225, left(rank 0)=224, right(rank 0)=224
+[17-44-19] Rank 0 (PID 25712): my counter=226, left(rank 1)=227, right(rank 1)=227
+[17-44-19] Rank 1 (PID 25713): my counter=227, left(rank 0)=226, right(rank 0)=226
+[17-44-20] Rank 0 (PID 25712): my counter=228, left(rank 1)=229, right(rank 1)=229
+[17-44-20] Rank 1 (PID 25713): my counter=229, left(rank 0)=228, right(rank 0)=228
+Rank 0: Checkpoint saved (counter = 230) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 231) to checkpoint_rank1.dat
+[17-44-21] Rank 0 (PID 25712): my counter=230, left(rank 1)=231, right(rank 1)=231
+[17-44-21] Rank 1 (PID 25713): my counter=231, left(rank 0)=230, right(rank 0)=230
+[17-44-22] Rank 0 (PID 25712): my counter=232, left(rank 1)=233, right(rank 1)=233
+[17-44-22] Rank 1 (PID 25713): my counter=233, left(rank 0)=232, right(rank 0)=232
+[17-44-23] Rank 0 (PID 25712): my counter=234, left(rank 1)=235, right(rank 1)=235
+[17-44-23] Rank 1 (PID 25713): my counter=235, left(rank 0)=234, right(rank 0)=234
+[17-44-24] Rank 1 (PID 25713): my counter=237, left(rank 0)=236, right(rank 0)=236
+[17-44-24] Rank 0 (PID 25712): my counter=236, left(rank 1)=237, right(rank 1)=237
+[17-44-25] Rank 1 (PID 25713): my counter=239, left(rank 0)=238, right(rank 0)=238
+[17-44-25] Rank 0 (PID 25712): my counter=238, left(rank 1)=239, right(rank 1)=239
+Rank 0: Checkpoint saved (counter = 240) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 241) to checkpoint_rank1.dat
+[17-44-26] Rank 0 (PID 25712): my counter=240, left(rank 1)=241, right(rank 1)=241
+[17-44-26] Rank 1 (PID 25713): my counter=241, left(rank 0)=240, right(rank 0)=240
+[17-44-27] Rank 0 (PID 25712): my counter=242, left(rank 1)=243, right(rank 1)=243
+[17-44-27] Rank 1 (PID 25713): my counter=243, left(rank 0)=242, right(rank 0)=242
+[17-44-28] Rank 0 (PID 25712): my counter=244, left(rank 1)=245, right(rank 1)=245
+[17-44-28] Rank 1 (PID 25713): my counter=245, left(rank 0)=244, right(rank 0)=244
+[17-44-29] Rank 0 (PID 25712): my counter=246, left(rank 1)=247, right(rank 1)=247
+[17-44-29] Rank 1 (PID 25713): my counter=247, left(rank 0)=246, right(rank 0)=246
+[17-44-30] Rank 0 (PID 25712): my counter=248, left(rank 1)=249, right(rank 1)=249
+[17-44-30] Rank 1 (PID 25713): my counter=249, left(rank 0)=248, right(rank 0)=248
+Rank 1: Checkpoint saved (counter = 251) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 250) to checkpoint_rank0.dat
+[17-44-31] Rank 1 (PID 25713): my counter=251, left(rank 0)=250, right(rank 0)=250
+[17-44-31] Rank 0 (PID 25712): my counter=250, left(rank 1)=251, right(rank 1)=251
+[17-44-32] Rank 1 (PID 25713): my counter=253, left(rank 0)=252, right(rank 0)=252
+[17-44-32] Rank 0 (PID 25712): my counter=252, left(rank 1)=253, right(rank 1)=253
+[17-44-33] Rank 0 (PID 25712): my counter=254, left(rank 1)=255, right(rank 1)=255
+[17-44-33] Rank 1 (PID 25713): my counter=255, left(rank 0)=254, right(rank 0)=254
+[17-44-34] Rank 0 (PID 25712): my counter=256, left(rank 1)=257, right(rank 1)=257
+[17-44-34] Rank 1 (PID 25713): my counter=257, left(rank 0)=256, right(rank 0)=256
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #6 ===
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 251)
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 250)
+[17-44-36] Rank 0 (PID 25763) started with counter = 250
+[17-44-36] Rank 1 (PID 25764) started with counter = 251
+[17-44-36] Rank 0 (PID 25763): my counter=250, left(rank 1)=251, right(rank 1)=251
+[17-44-36] Rank 1 (PID 25764): my counter=251, left(rank 0)=250, right(rank 0)=250
+[17-44-37] Rank 0 (PID 25763): my counter=252, left(rank 1)=253, right(rank 1)=253
+[17-44-37] Rank 1 (PID 25764): my counter=253, left(rank 0)=252, right(rank 0)=252
+[17-44-38] Rank 1 (PID 25764): my counter=255, left(rank 0)=254, right(rank 0)=254
+[17-44-38] Rank 0 (PID 25763): my counter=254, left(rank 1)=255, right(rank 1)=255
+[17-44-39] Rank 1 (PID 25764): my counter=257, left(rank 0)=256, right(rank 0)=256
+[17-44-39] Rank 0 (PID 25763): my counter=256, left(rank 1)=257, right(rank 1)=257
+[17-44-40] Rank 1 (PID 25764): my counter=259, left(rank 0)=258, right(rank 0)=258
+[17-44-40] Rank 0 (PID 25763): my counter=258, left(rank 1)=259, right(rank 1)=259
+Rank 1: Checkpoint saved (counter = 261) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 260) to checkpoint_rank0.dat
+[17-44-41] Rank 1 (PID 25764): my counter=261, left(rank 0)=260, right(rank 0)=260
+[17-44-41] Rank 0 (PID 25763): my counter=260, left(rank 1)=261, right(rank 1)=261
+[17-44-42] Rank 1 (PID 25764): my counter=263, left(rank 0)=262, right(rank 0)=262
+[17-44-42] Rank 0 (PID 25763): my counter=262, left(rank 1)=263, right(rank 1)=263
+[17-44-43] Rank 0 (PID 25763): my counter=264, left(rank 1)=265, right(rank 1)=265
+[17-44-43] Rank 1 (PID 25764): my counter=265, left(rank 0)=264, right(rank 0)=264
+[17-44-44] Rank 0 (PID 25763): my counter=266, left(rank 1)=267, right(rank 1)=267
+[17-44-44] Rank 1 (PID 25764): my counter=267, left(rank 0)=266, right(rank 0)=266
+[17-44-45] Rank 0 (PID 25763): my counter=268, left(rank 1)=269, right(rank 1)=269
+[17-44-45] Rank 1 (PID 25764): my counter=269, left(rank 0)=268, right(rank 0)=268
+Rank 1: Checkpoint saved (counter = 271) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 270) to checkpoint_rank0.dat
+[17-44-46] Rank 1 (PID 25764): my counter=271, left(rank 0)=270, right(rank 0)=270
+[17-44-46] Rank 0 (PID 25763): my counter=270, left(rank 1)=271, right(rank 1)=271
+[17-44-47] Rank 1 (PID 25764): my counter=273, left(rank 0)=272, right(rank 0)=272
+[17-44-47] Rank 0 (PID 25763): my counter=272, left(rank 1)=273, right(rank 1)=273
+[17-44-48] Rank 1 (PID 25764): my counter=275, left(rank 0)=274, right(rank 0)=274
+[17-44-48] Rank 0 (PID 25763): my counter=274, left(rank 1)=275, right(rank 1)=275
+[17-44-49] Rank 0 (PID 25763): my counter=276, left(rank 1)=277, right(rank 1)=277
+[17-44-49] Rank 1 (PID 25764): my counter=277, left(rank 0)=276, right(rank 0)=276
+[17-44-50] Rank 0 (PID 25763): my counter=278, left(rank 1)=279, right(rank 1)=279
+[17-44-50] Rank 1 (PID 25764): my counter=279, left(rank 0)=278, right(rank 0)=278
+Rank 1: Checkpoint saved (counter = 281) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 280) to checkpoint_rank0.dat
+[17-44-51] Rank 1 (PID 25764): my counter=281, left(rank 0)=280, right(rank 0)=280
+[17-44-51] Rank 0 (PID 25763): my counter=280, left(rank 1)=281, right(rank 1)=281
+[17-44-52] Rank 0 (PID 25763): my counter=282, left(rank 1)=283, right(rank 1)=283
+[17-44-52] Rank 1 (PID 25764): my counter=283, left(rank 0)=282, right(rank 0)=282
+[17-44-53] Rank 1 (PID 25764): my counter=285, left(rank 0)=284, right(rank 0)=284
+[17-44-53] Rank 0 (PID 25763): my counter=284, left(rank 1)=285, right(rank 1)=285
+[17-44-54] Rank 1 (PID 25764): my counter=287, left(rank 0)=286, right(rank 0)=286
+[17-44-54] Rank 0 (PID 25763): my counter=286, left(rank 1)=287, right(rank 1)=287
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #7 ===
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 280)
+[17-44-56] Rank 0 (PID 25799) started with counter = 280
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 281)
+[17-44-56] Rank 1 (PID 25800) started with counter = 281
+[17-44-56] Rank 0 (PID 25799): my counter=280, left(rank 1)=281, right(rank 1)=281
+[17-44-56] Rank 1 (PID 25800): my counter=281, left(rank 0)=280, right(rank 0)=280
+[17-44-57] Rank 0 (PID 25799): my counter=282, left(rank 1)=283, right(rank 1)=283
+[17-44-57] Rank 1 (PID 25800): my counter=283, left(rank 0)=282, right(rank 0)=282
+[17-44-58] Rank 1 (PID 25800): my counter=285, left(rank 0)=284, right(rank 0)=284
+[17-44-58] Rank 0 (PID 25799): my counter=284, left(rank 1)=285, right(rank 1)=285
+[17-44-59] Rank 1 (PID 25800): my counter=287, left(rank 0)=286, right(rank 0)=286
+[17-44-59] Rank 0 (PID 25799): my counter=286, left(rank 1)=287, right(rank 1)=287
+[17-45-00] Rank 1 (PID 25800): my counter=289, left(rank 0)=288, right(rank 0)=288
+[17-45-00] Rank 0 (PID 25799): my counter=288, left(rank 1)=289, right(rank 1)=289
+Rank 0: Checkpoint saved (counter = 290) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 291) to checkpoint_rank1.dat
+[17-45-01] Rank 0 (PID 25799): my counter=290, left(rank 1)=291, right(rank 1)=291
+[17-45-01] Rank 1 (PID 25800): my counter=291, left(rank 0)=290, right(rank 0)=290
+[17-45-02] Rank 0 (PID 25799): my counter=292, left(rank 1)=293, right(rank 1)=293
+[17-45-02] Rank 1 (PID 25800): my counter=293, left(rank 0)=292, right(rank 0)=292
+[17-45-03] Rank 0 (PID 25799): my counter=294, left(rank 1)=295, right(rank 1)=295
+[17-45-03] Rank 1 (PID 25800): my counter=295, left(rank 0)=294, right(rank 0)=294
+[17-45-04] Rank 0 (PID 25799): my counter=296, left(rank 1)=297, right(rank 1)=297
+[17-45-04] Rank 1 (PID 25800): my counter=297, left(rank 0)=296, right(rank 0)=296
+[17-45-05] Rank 0 (PID 25799): my counter=298, left(rank 1)=299, right(rank 1)=299
+[17-45-05] Rank 1 (PID 25800): my counter=299, left(rank 0)=298, right(rank 0)=298
+Rank 0: Checkpoint saved (counter = 300) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 301) to checkpoint_rank1.dat
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #8 ===
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 300)
+[17-45-06] Rank 0 (PID 25830) started with counter = 300
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 301)
+[17-45-06] Rank 1 (PID 25831) started with counter = 301
+[17-45-06] Rank 0 (PID 25830): my counter=300, left(rank 1)=301, right(rank 1)=301
+[17-45-06] Rank 1 (PID 25831): my counter=301, left(rank 0)=300, right(rank 0)=300
+[17-45-07] Rank 0 (PID 25830): my counter=302, left(rank 1)=303, right(rank 1)=303
+[17-45-07] Rank 1 (PID 25831): my counter=303, left(rank 0)=302, right(rank 0)=302
+[17-45-08] Rank 0 (PID 25830): my counter=304, left(rank 1)=305, right(rank 1)=305
+[17-45-08] Rank 1 (PID 25831): my counter=305, left(rank 0)=304, right(rank 0)=304
+[17-45-09] Rank 0 (PID 25830): my counter=306, left(rank 1)=307, right(rank 1)=307
+[17-45-09] Rank 1 (PID 25831): my counter=307, left(rank 0)=306, right(rank 0)=306
+[17-45-10] Rank 0 (PID 25830): my counter=308, left(rank 1)=309, right(rank 1)=309
+[17-45-10] Rank 1 (PID 25831): my counter=309, left(rank 0)=308, right(rank 0)=308
+Rank 0: Checkpoint saved (counter = 310) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 311) to checkpoint_rank1.dat
+[17-45-11] Rank 1 (PID 25831): my counter=311, left(rank 0)=310, right(rank 0)=310
+[17-45-11] Rank 0 (PID 25830): my counter=310, left(rank 1)=311, right(rank 1)=311
+[17-45-12] Rank 1 (PID 25831): my counter=313, left(rank 0)=312, right(rank 0)=312
+[17-45-12] Rank 0 (PID 25830): my counter=312, left(rank 1)=313, right(rank 1)=313
+[17-45-13] Rank 1 (PID 25831): my counter=315, left(rank 0)=314, right(rank 0)=314
+[17-45-13] Rank 0 (PID 25830): my counter=314, left(rank 1)=315, right(rank 1)=315
+[17-45-14] Rank 1 (PID 25831): my counter=317, left(rank 0)=316, right(rank 0)=316
+[17-45-14] Rank 0 (PID 25830): my counter=316, left(rank 1)=317, right(rank 1)=317
+[17-45-15] Rank 1 (PID 25831): my counter=319, left(rank 0)=318, right(rank 0)=318
+[17-45-15] Rank 0 (PID 25830): my counter=318, left(rank 1)=319, right(rank 1)=319
+Rank 0: Checkpoint saved (counter = 320) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 321) to checkpoint_rank1.dat
+[17-45-16] Rank 0 (PID 25830): my counter=320, left(rank 1)=321, right(rank 1)=321
+[17-45-16] Rank 1 (PID 25831): my counter=321, left(rank 0)=320, right(rank 0)=320
+[17-45-17] Rank 0 (PID 25830): my counter=322, left(rank 1)=323, right(rank 1)=323
+[17-45-17] Rank 1 (PID 25831): my counter=323, left(rank 0)=322, right(rank 0)=322
+[17-45-18] Rank 0 (PID 25830): my counter=324, left(rank 1)=325, right(rank 1)=325
+[17-45-18] Rank 1 (PID 25831): my counter=325, left(rank 0)=324, right(rank 0)=324
+[17-45-19] Rank 0 (PID 25830): my counter=326, left(rank 1)=327, right(rank 1)=327
+[17-45-19] Rank 1 (PID 25831): my counter=327, left(rank 0)=326, right(rank 0)=326
+[17-45-20] Rank 1 (PID 25831): my counter=329, left(rank 0)=328, right(rank 0)=328
+[17-45-20] Rank 0 (PID 25830): my counter=328, left(rank 1)=329, right(rank 1)=329
+Rank 1: Checkpoint saved (counter = 331) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 330) to checkpoint_rank0.dat
+[17-45-21] Rank 1 (PID 25831): my counter=331, left(rank 0)=330, right(rank 0)=330
+[17-45-21] Rank 0 (PID 25830): my counter=330, left(rank 1)=331, right(rank 1)=331
+[17-45-22] Rank 1 (PID 25831): my counter=333, left(rank 0)=332, right(rank 0)=332
+[17-45-22] Rank 0 (PID 25830): my counter=332, left(rank 1)=333, right(rank 1)=333
+[17-45-23] Rank 1 (PID 25831): my counter=335, left(rank 0)=334, right(rank 0)=334
+[17-45-23] Rank 0 (PID 25830): my counter=334, left(rank 1)=335, right(rank 1)=335
+[17-45-24] Rank 1 (PID 25831): my counter=337, left(rank 0)=336, right(rank 0)=336
+[17-45-24] Rank 0 (PID 25830): my counter=336, left(rank 1)=337, right(rank 1)=337
+[17-45-25] Rank 1 (PID 25831): my counter=339, left(rank 0)=338, right(rank 0)=338
+[17-45-25] Rank 0 (PID 25830): my counter=338, left(rank 1)=339, right(rank 1)=339
+Rank 1: Checkpoint saved (counter = 341) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 340) to checkpoint_rank0.dat
+[17-45-26] Rank 1 (PID 25831): my counter=341, left(rank 0)=340, right(rank 0)=340
+[17-45-26] Rank 0 (PID 25830): my counter=340, left(rank 1)=341, right(rank 1)=341
+[17-45-27] Rank 1 (PID 25831): my counter=343, left(rank 0)=342, right(rank 0)=342
+[17-45-27] Rank 0 (PID 25830): my counter=342, left(rank 1)=343, right(rank 1)=343
+[17-45-28] Rank 1 (PID 25831): my counter=345, left(rank 0)=344, right(rank 0)=344
+[17-45-28] Rank 0 (PID 25830): my counter=344, left(rank 1)=345, right(rank 1)=345
+[17-45-29] Rank 1 (PID 25831): my counter=347, left(rank 0)=346, right(rank 0)=346
+[17-45-29] Rank 0 (PID 25830): my counter=346, left(rank 1)=347, right(rank 1)=347
+[17-45-30] Rank 1 (PID 25831): my counter=349, left(rank 0)=348, right(rank 0)=348
+[17-45-30] Rank 0 (PID 25830): my counter=348, left(rank 1)=349, right(rank 1)=349
+Rank 1: Checkpoint saved (counter = 351) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 350) to checkpoint_rank0.dat
+[17-45-31] Rank 1 (PID 25831): my counter=351, left(rank 0)=350, right(rank 0)=350
+[17-45-31] Rank 0 (PID 25830): my counter=350, left(rank 1)=351, right(rank 1)=351
+[17-45-32] Rank 1 (PID 25831): my counter=353, left(rank 0)=352, right(rank 0)=352
+[17-45-32] Rank 0 (PID 25830): my counter=352, left(rank 1)=353, right(rank 1)=353
+[17-45-33] Rank 1 (PID 25831): my counter=355, left(rank 0)=354, right(rank 0)=354
+[17-45-33] Rank 0 (PID 25830): my counter=354, left(rank 1)=355, right(rank 1)=355
+[17-45-34] Rank 1 (PID 25831): my counter=357, left(rank 0)=356, right(rank 0)=356
+[17-45-34] Rank 0 (PID 25830): my counter=356, left(rank 1)=357, right(rank 1)=357
+[17-45-35] Rank 0 (PID 25830): my counter=358, left(rank 1)=359, right(rank 1)=359
+[17-45-35] Rank 1 (PID 25831): my counter=359, left(rank 0)=358, right(rank 0)=358
+Rank 1: Checkpoint saved (counter = 361) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 360) to checkpoint_rank0.dat
+[17-45-36] Rank 1 (PID 25831): my counter=361, left(rank 0)=360, right(rank 0)=360
+[17-45-36] Rank 0 (PID 25830): my counter=360, left(rank 1)=361, right(rank 1)=361
+[17-45-37] Rank 0 (PID 25830): my counter=362, left(rank 1)=363, right(rank 1)=363
+[17-45-37] Rank 1 (PID 25831): my counter=363, left(rank 0)=362, right(rank 0)=362
+[17-45-38] Rank 0 (PID 25830): my counter=364, left(rank 1)=365, right(rank 1)=365
+[17-45-38] Rank 1 (PID 25831): my counter=365, left(rank 0)=364, right(rank 0)=364
+[17-45-39] Rank 0 (PID 25830): my counter=366, left(rank 1)=367, right(rank 1)=367
+[17-45-39] Rank 1 (PID 25831): my counter=367, left(rank 0)=366, right(rank 0)=366
+[17-45-40] Rank 0 (PID 25830): my counter=368, left(rank 1)=369, right(rank 1)=369
+[17-45-40] Rank 1 (PID 25831): my counter=369, left(rank 0)=368, right(rank 0)=368
+Rank 1: Checkpoint saved (counter = 371) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 370) to checkpoint_rank0.dat
+[17-45-41] Rank 1 (PID 25831): my counter=371, left(rank 0)=370, right(rank 0)=370
+[17-45-41] Rank 0 (PID 25830): my counter=370, left(rank 1)=371, right(rank 1)=371
+[17-45-42] Rank 1 (PID 25831): my counter=373, left(rank 0)=372, right(rank 0)=372
+[17-45-42] Rank 0 (PID 25830): my counter=372, left(rank 1)=373, right(rank 1)=373
+[17-45-43] Rank 0 (PID 25830): my counter=374, left(rank 1)=375, right(rank 1)=375
+[17-45-43] Rank 1 (PID 25831): my counter=375, left(rank 0)=374, right(rank 0)=374
+[17-45-44] Rank 0 (PID 25830): my counter=376, left(rank 1)=377, right(rank 1)=377
+[17-45-44] Rank 1 (PID 25831): my counter=377, left(rank 0)=376, right(rank 0)=376
+[17-45-45] Rank 0 (PID 25830): my counter=378, left(rank 1)=379, right(rank 1)=379
+[17-45-45] Rank 1 (PID 25831): my counter=379, left(rank 0)=378, right(rank 0)=378
+Rank 1: Checkpoint saved (counter = 381) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 380) to checkpoint_rank0.dat
+[17-45-46] Rank 1 (PID 25831): my counter=381, left(rank 0)=380, right(rank 0)=380
+[17-45-46] Rank 0 (PID 25830): my counter=380, left(rank 1)=381, right(rank 1)=381
+[17-45-47] Rank 1 (PID 25831): my counter=383, left(rank 0)=382, right(rank 0)=382
+[17-45-47] Rank 0 (PID 25830): my counter=382, left(rank 1)=383, right(rank 1)=383
+[17-45-48] Rank 1 (PID 25831): my counter=385, left(rank 0)=384, right(rank 0)=384
+[17-45-48] Rank 0 (PID 25830): my counter=384, left(rank 1)=385, right(rank 1)=385
+[17-45-49] Rank 1 (PID 25831): my counter=387, left(rank 0)=386, right(rank 0)=386
+[17-45-49] Rank 0 (PID 25830): my counter=386, left(rank 1)=387, right(rank 1)=387
+[17-45-50] Rank 1 (PID 25831): my counter=389, left(rank 0)=388, right(rank 0)=388
+[17-45-50] Rank 0 (PID 25830): my counter=388, left(rank 1)=389, right(rank 1)=389
+Rank 1: Checkpoint saved (counter = 391) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 390) to checkpoint_rank0.dat
+[17-45-51] Rank 1 (PID 25831): my counter=391, left(rank 0)=390, right(rank 0)=390
+[17-45-51] Rank 0 (PID 25830): my counter=390, left(rank 1)=391, right(rank 1)=391
+[17-45-52] Rank 1 (PID 25831): my counter=393, left(rank 0)=392, right(rank 0)=392
+[17-45-52] Rank 0 (PID 25830): my counter=392, left(rank 1)=393, right(rank 1)=393
+[17-45-53] Rank 1 (PID 25831): my counter=395, left(rank 0)=394, right(rank 0)=394
+[17-45-53] Rank 0 (PID 25830): my counter=394, left(rank 1)=395, right(rank 1)=395
+[17-45-54] Rank 1 (PID 25831): my counter=397, left(rank 0)=396, right(rank 0)=396
+[17-45-54] Rank 0 (PID 25830): my counter=396, left(rank 1)=397, right(rank 1)=397
+[17-45-55] Rank 1 (PID 25831): my counter=399, left(rank 0)=398, right(rank 0)=398
+[17-45-55] Rank 0 (PID 25830): my counter=398, left(rank 1)=399, right(rank 1)=399
+Rank 0: Checkpoint saved (counter = 400) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 401) to checkpoint_rank1.dat
+[17-45-56] Rank 0 (PID 25830): my counter=400, left(rank 1)=401, right(rank 1)=401
+[17-45-56] Rank 1 (PID 25831): my counter=401, left(rank 0)=400, right(rank 0)=400
+[17-45-57] Rank 1 (PID 25831): my counter=403, left(rank 0)=402, right(rank 0)=402
+[17-45-57] Rank 0 (PID 25830): my counter=402, left(rank 1)=403, right(rank 1)=403
+[17-45-58] Rank 1 (PID 25831): my counter=405, left(rank 0)=404, right(rank 0)=404
+[17-45-58] Rank 0 (PID 25830): my counter=404, left(rank 1)=405, right(rank 1)=405
+[17-45-59] Rank 0 (PID 25830): my counter=406, left(rank 1)=407, right(rank 1)=407
+[17-45-59] Rank 1 (PID 25831): my counter=407, left(rank 0)=406, right(rank 0)=406
+[17-46-00] Rank 0 (PID 25830): my counter=408, left(rank 1)=409, right(rank 1)=409
+[17-46-00] Rank 1 (PID 25831): my counter=409, left(rank 0)=408, right(rank 0)=408
+Rank 1: Checkpoint saved (counter = 411) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 410) to checkpoint_rank0.dat
+[17-46-01] Rank 1 (PID 25831): my counter=411, left(rank 0)=410, right(rank 0)=410
+[17-46-01] Rank 0 (PID 25830): my counter=410, left(rank 1)=411, right(rank 1)=411
+[17-46-02] Rank 1 (PID 25831): my counter=413, left(rank 0)=412, right(rank 0)=412
+[17-46-02] Rank 0 (PID 25830): my counter=412, left(rank 1)=413, right(rank 1)=413
+[17-46-03] Rank 1 (PID 25831): my counter=415, left(rank 0)=414, right(rank 0)=414
+[17-46-03] Rank 0 (PID 25830): my counter=414, left(rank 1)=415, right(rank 1)=415
+[17-46-04] Rank 1 (PID 25831): my counter=417, left(rank 0)=416, right(rank 0)=416
+[17-46-04] Rank 0 (PID 25830): my counter=416, left(rank 1)=417, right(rank 1)=417
+[17-46-05] Rank 1 (PID 25831): my counter=419, left(rank 0)=418, right(rank 0)=418
+[17-46-05] Rank 0 (PID 25830): my counter=418, left(rank 1)=419, right(rank 1)=419
+Rank 1: Checkpoint saved (counter = 421) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 420) to checkpoint_rank0.dat
+[17-46-06] Rank 0 (PID 25830): my counter=420, left(rank 1)=421, right(rank 1)=421
+[17-46-06] Rank 1 (PID 25831): my counter=421, left(rank 0)=420, right(rank 0)=420
+[17-46-07] Rank 0 (PID 25830): my counter=422, left(rank 1)=423, right(rank 1)=423
+[17-46-07] Rank 1 (PID 25831): my counter=423, left(rank 0)=422, right(rank 0)=422
+[17-46-08] Rank 0 (PID 25830): my counter=424, left(rank 1)=425, right(rank 1)=425
+[17-46-08] Rank 1 (PID 25831): my counter=425, left(rank 0)=424, right(rank 0)=424
+[17-46-09] Rank 0 (PID 25830): my counter=426, left(rank 1)=427, right(rank 1)=427
+[17-46-09] Rank 1 (PID 25831): my counter=427, left(rank 0)=426, right(rank 0)=426
+[17-46-10] Rank 0 (PID 25830): my counter=428, left(rank 1)=429, right(rank 1)=429
+[17-46-10] Rank 1 (PID 25831): my counter=429, left(rank 0)=428, right(rank 0)=428
+Rank 0: Checkpoint saved (counter = 430) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 431) to checkpoint_rank1.dat
+[17-46-11] Rank 0 (PID 25830): my counter=430, left(rank 1)=431, right(rank 1)=431
+[17-46-11] Rank 1 (PID 25831): my counter=431, left(rank 0)=430, right(rank 0)=430
+[17-46-12] Rank 0 (PID 25830): my counter=432, left(rank 1)=433, right(rank 1)=433
+[17-46-12] Rank 1 (PID 25831): my counter=433, left(rank 0)=432, right(rank 0)=432
+[17-46-13] Rank 1 (PID 25831): my counter=435, left(rank 0)=434, right(rank 0)=434
+[17-46-13] Rank 0 (PID 25830): my counter=434, left(rank 1)=435, right(rank 1)=435
+[17-46-14] Rank 1 (PID 25831): my counter=437, left(rank 0)=436, right(rank 0)=436
+[17-46-14] Rank 0 (PID 25830): my counter=436, left(rank 1)=437, right(rank 1)=437
+[17-46-15] Rank 0 (PID 25830): my counter=438, left(rank 1)=439, right(rank 1)=439
+[17-46-15] Rank 1 (PID 25831): my counter=439, left(rank 0)=438, right(rank 0)=438
+Rank 0: Checkpoint saved (counter = 440) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 441) to checkpoint_rank1.dat
+[17-46-16] Rank 0 (PID 25830): my counter=440, left(rank 1)=441, right(rank 1)=441
+[17-46-16] Rank 1 (PID 25831): my counter=441, left(rank 0)=440, right(rank 0)=440
+[17-46-17] Rank 0 (PID 25830): my counter=442, left(rank 1)=443, right(rank 1)=443
+[17-46-17] Rank 1 (PID 25831): my counter=443, left(rank 0)=442, right(rank 0)=442
+[17-46-18] Rank 0 (PID 25830): my counter=444, left(rank 1)=445, right(rank 1)=445
+[17-46-18] Rank 1 (PID 25831): my counter=445, left(rank 0)=444, right(rank 0)=444
+[17-46-19] Rank 0 (PID 25830): my counter=446, left(rank 1)=447, right(rank 1)=447
+[17-46-19] Rank 1 (PID 25831): my counter=447, left(rank 0)=446, right(rank 0)=446
+[17-46-20] Rank 0 (PID 25830): my counter=448, left(rank 1)=449, right(rank 1)=449
+[17-46-20] Rank 1 (PID 25831): my counter=449, left(rank 0)=448, right(rank 0)=448
+Rank 1: Checkpoint saved (counter = 451) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 450) to checkpoint_rank0.dat
+[17-46-21] Rank 1 (PID 25831): my counter=451, left(rank 0)=450, right(rank 0)=450
+[17-46-21] Rank 0 (PID 25830): my counter=450, left(rank 1)=451, right(rank 1)=451
+[17-46-22] Rank 1 (PID 25831): my counter=453, left(rank 0)=452, right(rank 0)=452
+[17-46-22] Rank 0 (PID 25830): my counter=452, left(rank 1)=453, right(rank 1)=453
+[17-46-23] Rank 1 (PID 25831): my counter=455, left(rank 0)=454, right(rank 0)=454
+[17-46-23] Rank 0 (PID 25830): my counter=454, left(rank 1)=455, right(rank 1)=455
+[17-46-24] Rank 0 (PID 25830): my counter=456, left(rank 1)=457, right(rank 1)=457
+[17-46-24] Rank 1 (PID 25831): my counter=457, left(rank 0)=456, right(rank 0)=456
+[17-46-25] Rank 1 (PID 25831): my counter=459, left(rank 0)=458, right(rank 0)=458
+[17-46-25] Rank 0 (PID 25830): my counter=458, left(rank 1)=459, right(rank 1)=459
+Rank 0: Checkpoint saved (counter = 460) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 461) to checkpoint_rank1.dat
+[17-46-26] Rank 0 (PID 25830): my counter=460, left(rank 1)=461, right(rank 1)=461
+[17-46-26] Rank 1 (PID 25831): my counter=461, left(rank 0)=460, right(rank 0)=460
+[17-46-27] Rank 0 (PID 25830): my counter=462, left(rank 1)=463, right(rank 1)=463
+[17-46-27] Rank 1 (PID 25831): my counter=463, left(rank 0)=462, right(rank 0)=462
+[17-46-28] Rank 0 (PID 25830): my counter=464, left(rank 1)=465, right(rank 1)=465
+[17-46-28] Rank 1 (PID 25831): my counter=465, left(rank 0)=464, right(rank 0)=464
+[17-46-29] Rank 0 (PID 25830): my counter=466, left(rank 1)=467, right(rank 1)=467
+[17-46-29] Rank 1 (PID 25831): my counter=467, left(rank 0)=466, right(rank 0)=466
+[17-46-30] Rank 0 (PID 25830): my counter=468, left(rank 1)=469, right(rank 1)=469
+[17-46-30] Rank 1 (PID 25831): my counter=469, left(rank 0)=468, right(rank 0)=468
+Rank 1: Checkpoint saved (counter = 471) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 470) to checkpoint_rank0.dat
+[17-46-31] Rank 1 (PID 25831): my counter=471, left(rank 0)=470, right(rank 0)=470
+[17-46-31] Rank 0 (PID 25830): my counter=470, left(rank 1)=471, right(rank 1)=471
+[17-46-32] Rank 1 (PID 25831): my counter=473, left(rank 0)=472, right(rank 0)=472
+[17-46-32] Rank 0 (PID 25830): my counter=472, left(rank 1)=473, right(rank 1)=473
+[17-46-33] Rank 1 (PID 25831): my counter=475, left(rank 0)=474, right(rank 0)=474
+[17-46-33] Rank 0 (PID 25830): my counter=474, left(rank 1)=475, right(rank 1)=475
+[17-46-34] Rank 1 (PID 25831): my counter=477, left(rank 0)=476, right(rank 0)=476
+[17-46-34] Rank 0 (PID 25830): my counter=476, left(rank 1)=477, right(rank 1)=477
+[17-46-35] Rank 1 (PID 25831): my counter=479, left(rank 0)=478, right(rank 0)=478
+[17-46-35] Rank 0 (PID 25830): my counter=478, left(rank 1)=479, right(rank 1)=479
+Rank 0: Checkpoint saved (counter = 480) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 481) to checkpoint_rank1.dat
+[17-46-36] Rank 0 (PID 25830): my counter=480, left(rank 1)=481, right(rank 1)=481
+[17-46-36] Rank 1 (PID 25831): my counter=481, left(rank 0)=480, right(rank 0)=480
+[17-46-37] Rank 0 (PID 25830): my counter=482, left(rank 1)=483, right(rank 1)=483
+[17-46-37] Rank 1 (PID 25831): my counter=483, left(rank 0)=482, right(rank 0)=482
+[17-46-38] Rank 0 (PID 25830): my counter=484, left(rank 1)=485, right(rank 1)=485
+[17-46-38] Rank 1 (PID 25831): my counter=485, left(rank 0)=484, right(rank 0)=484
+[17-46-39] Rank 0 (PID 25830): my counter=486, left(rank 1)=487, right(rank 1)=487
+[17-46-39] Rank 1 (PID 25831): my counter=487, left(rank 0)=486, right(rank 0)=486
+[17-46-40] Rank 0 (PID 25830): my counter=488, left(rank 1)=489, right(rank 1)=489
+[17-46-40] Rank 1 (PID 25831): my counter=489, left(rank 0)=488, right(rank 0)=488
+Rank 1: Checkpoint saved (counter = 491) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 490) to checkpoint_rank0.dat
+[17-46-41] Rank 1 (PID 25831): my counter=491, left(rank 0)=490, right(rank 0)=490
+[17-46-41] Rank 0 (PID 25830): my counter=490, left(rank 1)=491, right(rank 1)=491
+[17-46-42] Rank 1 (PID 25831): my counter=493, left(rank 0)=492, right(rank 0)=492
+[17-46-42] Rank 0 (PID 25830): my counter=492, left(rank 1)=493, right(rank 1)=493
+[17-46-43] Rank 1 (PID 25831): my counter=495, left(rank 0)=494, right(rank 0)=494
+[17-46-43] Rank 0 (PID 25830): my counter=494, left(rank 1)=495, right(rank 1)=495
+[17-46-44] Rank 0 (PID 25830): my counter=496, left(rank 1)=497, right(rank 1)=497
+[17-46-44] Rank 1 (PID 25831): my counter=497, left(rank 0)=496, right(rank 0)=496
+[17-46-45] Rank 0 (PID 25830): my counter=498, left(rank 1)=499, right(rank 1)=499
+[17-46-45] Rank 1 (PID 25831): my counter=499, left(rank 0)=498, right(rank 0)=498
+Rank 1: Checkpoint saved (counter = 501) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 500) to checkpoint_rank0.dat
+[17-46-46] Rank 1 (PID 25831): my counter=501, left(rank 0)=500, right(rank 0)=500
+[17-46-46] Rank 0 (PID 25830): my counter=500, left(rank 1)=501, right(rank 1)=501
+[17-46-47] Rank 1 (PID 25831): my counter=503, left(rank 0)=502, right(rank 0)=502
+[17-46-47] Rank 0 (PID 25830): my counter=502, left(rank 1)=503, right(rank 1)=503
+[17-46-48] Rank 1 (PID 25831): my counter=505, left(rank 0)=504, right(rank 0)=504
+[17-46-48] Rank 0 (PID 25830): my counter=504, left(rank 1)=505, right(rank 1)=505
+[17-46-49] Rank 1 (PID 25831): my counter=507, left(rank 0)=506, right(rank 0)=506
+[17-46-49] Rank 0 (PID 25830): my counter=506, left(rank 1)=507, right(rank 1)=507
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #9 ===
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 500)
+[17-46-51] Rank 0 (PID 26031) started with counter = 500
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 501)
+[17-46-51] Rank 1 (PID 26032) started with counter = 501
+[17-46-51] Rank 1 (PID 26032): my counter=501, left(rank 0)=500, right(rank 0)=500
+[17-46-51] Rank 0 (PID 26031): my counter=500, left(rank 1)=501, right(rank 1)=501
+[17-46-52] Rank 1 (PID 26032): my counter=503, left(rank 0)=502, right(rank 0)=502
+[17-46-52] Rank 0 (PID 26031): my counter=502, left(rank 1)=503, right(rank 1)=503
+[17-46-53] Rank 1 (PID 26032): my counter=505, left(rank 0)=504, right(rank 0)=504
+[17-46-53] Rank 0 (PID 26031): my counter=504, left(rank 1)=505, right(rank 1)=505
+[17-46-54] Rank 1 (PID 26032): my counter=507, left(rank 0)=506, right(rank 0)=506
+[17-46-54] Rank 0 (PID 26031): my counter=506, left(rank 1)=507, right(rank 1)=507
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #10 ===
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 500)
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 501)
+[17-46-56] Rank 1 (PID 26048) started with counter = 501
+[17-46-56] Rank 0 (PID 26047) started with counter = 500
+[17-46-56] Rank 1 (PID 26048): my counter=501, left(rank 0)=500, right(rank 0)=500
+[17-46-56] Rank 0 (PID 26047): my counter=500, left(rank 1)=501, right(rank 1)=501
+[17-46-57] Rank 1 (PID 26048): my counter=503, left(rank 0)=502, right(rank 0)=502
+[17-46-57] Rank 0 (PID 26047): my counter=502, left(rank 1)=503, right(rank 1)=503
+[17-46-58] Rank 1 (PID 26048): my counter=505, left(rank 0)=504, right(rank 0)=504
+[17-46-58] Rank 0 (PID 26047): my counter=504, left(rank 1)=505, right(rank 1)=505
+[17-46-59] Rank 1 (PID 26048): my counter=507, left(rank 0)=506, right(rank 0)=506
+[17-46-59] Rank 0 (PID 26047): my counter=506, left(rank 1)=507, right(rank 1)=507
+[17-47-00] Rank 1 (PID 26048): my counter=509, left(rank 0)=508, right(rank 0)=508
+[17-47-00] Rank 0 (PID 26047): my counter=508, left(rank 1)=509, right(rank 1)=509
+Rank 1: Checkpoint saved (counter = 511) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 510) to checkpoint_rank0.dat
+[17-47-01] Rank 1 (PID 26048): my counter=511, left(rank 0)=510, right(rank 0)=510
+[17-47-01] Rank 0 (PID 26047): my counter=510, left(rank 1)=511, right(rank 1)=511
+[17-47-02] Rank 1 (PID 26048): my counter=513, left(rank 0)=512, right(rank 0)=512
+[17-47-02] Rank 0 (PID 26047): my counter=512, left(rank 1)=513, right(rank 1)=513
+[17-47-03] Rank 0 (PID 26047): my counter=514, left(rank 1)=515, right(rank 1)=515
+[17-47-03] Rank 1 (PID 26048): my counter=515, left(rank 0)=514, right(rank 0)=514
+[17-47-04] Rank 0 (PID 26047): my counter=516, left(rank 1)=517, right(rank 1)=517
+[17-47-04] Rank 1 (PID 26048): my counter=517, left(rank 0)=516, right(rank 0)=516
+[17-47-05] Rank 0 (PID 26047): my counter=518, left(rank 1)=519, right(rank 1)=519
+[17-47-05] Rank 1 (PID 26048): my counter=519, left(rank 0)=518, right(rank 0)=518
+Rank 1: Checkpoint saved (counter = 521) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 520) to checkpoint_rank0.dat
+[17-47-06] Rank 1 (PID 26048): my counter=521, left(rank 0)=520, right(rank 0)=520
+[17-47-06] Rank 0 (PID 26047): my counter=520, left(rank 1)=521, right(rank 1)=521
+[17-47-07] Rank 1 (PID 26048): my counter=523, left(rank 0)=522, right(rank 0)=522
+[17-47-07] Rank 0 (PID 26047): my counter=522, left(rank 1)=523, right(rank 1)=523
+[17-47-08] Rank 1 (PID 26048): my counter=525, left(rank 0)=524, right(rank 0)=524
+[17-47-08] Rank 0 (PID 26047): my counter=524, left(rank 1)=525, right(rank 1)=525
+[17-47-09] Rank 1 (PID 26048): my counter=527, left(rank 0)=526, right(rank 0)=526
+[17-47-09] Rank 0 (PID 26047): my counter=526, left(rank 1)=527, right(rank 1)=527
+[17-47-10] Rank 1 (PID 26048): my counter=529, left(rank 0)=528, right(rank 0)=528
+[17-47-10] Rank 0 (PID 26047): my counter=528, left(rank 1)=529, right(rank 1)=529
+Rank 0: Checkpoint saved (counter = 530) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 531) to checkpoint_rank1.dat
+[17-47-11] Rank 0 (PID 26047): my counter=530, left(rank 1)=531, right(rank 1)=531
+[17-47-11] Rank 1 (PID 26048): my counter=531, left(rank 0)=530, right(rank 0)=530
+[17-47-12] Rank 0 (PID 26047): my counter=532, left(rank 1)=533, right(rank 1)=533
+[17-47-12] Rank 1 (PID 26048): my counter=533, left(rank 0)=532, right(rank 0)=532
+[17-47-13] Rank 0 (PID 26047): my counter=534, left(rank 1)=535, right(rank 1)=535
+[17-47-13] Rank 1 (PID 26048): my counter=535, left(rank 0)=534, right(rank 0)=534
+[17-47-14] Rank 0 (PID 26047): my counter=536, left(rank 1)=537, right(rank 1)=537
+[17-47-14] Rank 1 (PID 26048): my counter=537, left(rank 0)=536, right(rank 0)=536
+[17-47-15] Rank 0 (PID 26047): my counter=538, left(rank 1)=539, right(rank 1)=539
+[17-47-15] Rank 1 (PID 26048): my counter=539, left(rank 0)=538, right(rank 0)=538
+Rank 0: Checkpoint saved (counter = 540) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 541) to checkpoint_rank1.dat
+[17-47-16] Rank 0 (PID 26047): my counter=540, left(rank 1)=541, right(rank 1)=541
+[17-47-16] Rank 1 (PID 26048): my counter=541, left(rank 0)=540, right(rank 0)=540
+[17-47-17] Rank 0 (PID 26047): my counter=542, left(rank 1)=543, right(rank 1)=543
+[17-47-17] Rank 1 (PID 26048): my counter=543, left(rank 0)=542, right(rank 0)=542
+[17-47-18] Rank 1 (PID 26048): my counter=545, left(rank 0)=544, right(rank 0)=544
+[17-47-18] Rank 0 (PID 26047): my counter=544, left(rank 1)=545, right(rank 1)=545
+[17-47-19] Rank 0 (PID 26047): my counter=546, left(rank 1)=547, right(rank 1)=547
+[17-47-19] Rank 1 (PID 26048): my counter=547, left(rank 0)=546, right(rank 0)=546
+[17-47-20] Rank 0 (PID 26047): my counter=548, left(rank 1)=549, right(rank 1)=549
+[17-47-20] Rank 1 (PID 26048): my counter=549, left(rank 0)=548, right(rank 0)=548
+Rank 1: Checkpoint saved (counter = 551) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 550) to checkpoint_rank0.dat
+[17-47-21] Rank 1 (PID 26048): my counter=551, left(rank 0)=550, right(rank 0)=550
+[17-47-21] Rank 0 (PID 26047): my counter=550, left(rank 1)=551, right(rank 1)=551
+[17-47-22] Rank 1 (PID 26048): my counter=553, left(rank 0)=552, right(rank 0)=552
+[17-47-22] Rank 0 (PID 26047): my counter=552, left(rank 1)=553, right(rank 1)=553
+[17-47-23] Rank 0 (PID 26047): my counter=554, left(rank 1)=555, right(rank 1)=555
+[17-47-23] Rank 1 (PID 26048): my counter=555, left(rank 0)=554, right(rank 0)=554
+[17-47-24] Rank 0 (PID 26047): my counter=556, left(rank 1)=557, right(rank 1)=557
+[17-47-24] Rank 1 (PID 26048): my counter=557, left(rank 0)=556, right(rank 0)=556
+[17-47-25] Rank 0 (PID 26047): my counter=558, left(rank 1)=559, right(rank 1)=559
+[17-47-25] Rank 1 (PID 26048): my counter=559, left(rank 0)=558, right(rank 0)=558
+Rank 1: Checkpoint saved (counter = 561) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 560) to checkpoint_rank0.dat
+[17-47-26] Rank 1 (PID 26048): my counter=561, left(rank 0)=560, right(rank 0)=560
+[17-47-26] Rank 0 (PID 26047): my counter=560, left(rank 1)=561, right(rank 1)=561
+[17-47-27] Rank 0 (PID 26047): my counter=562, left(rank 1)=563, right(rank 1)=563
+[17-47-27] Rank 1 (PID 26048): my counter=563, left(rank 0)=562, right(rank 0)=562
+[17-47-28] Rank 0 (PID 26047): my counter=564, left(rank 1)=565, right(rank 1)=565
+[17-47-28] Rank 1 (PID 26048): my counter=565, left(rank 0)=564, right(rank 0)=564
+[17-47-29] Rank 0 (PID 26047): my counter=566, left(rank 1)=567, right(rank 1)=567
+[17-47-29] Rank 1 (PID 26048): my counter=567, left(rank 0)=566, right(rank 0)=566
+[17-47-30] Rank 0 (PID 26047): my counter=568, left(rank 1)=569, right(rank 1)=569
+[17-47-30] Rank 1 (PID 26048): my counter=569, left(rank 0)=568, right(rank 0)=568
+Rank 1: Checkpoint saved (counter = 571) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 570) to checkpoint_rank0.dat
+[17-47-31] Rank 1 (PID 26048): my counter=571, left(rank 0)=570, right(rank 0)=570
+[17-47-31] Rank 0 (PID 26047): my counter=570, left(rank 1)=571, right(rank 1)=571
+[17-47-32] Rank 1 (PID 26048): my counter=573, left(rank 0)=572, right(rank 0)=572
+[17-47-32] Rank 0 (PID 26047): my counter=572, left(rank 1)=573, right(rank 1)=573
+[17-47-33] Rank 1 (PID 26048): my counter=575, left(rank 0)=574, right(rank 0)=574
+[17-47-33] Rank 0 (PID 26047): my counter=574, left(rank 1)=575, right(rank 1)=575
+[17-47-34] Rank 1 (PID 26048): my counter=577, left(rank 0)=576, right(rank 0)=576
+[17-47-34] Rank 0 (PID 26047): my counter=576, left(rank 1)=577, right(rank 1)=577
+[17-47-35] Rank 1 (PID 26048): my counter=579, left(rank 0)=578, right(rank 0)=578
+[17-47-35] Rank 0 (PID 26047): my counter=578, left(rank 1)=579, right(rank 1)=579
+Rank 0: Checkpoint saved (counter = 580) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 581) to checkpoint_rank1.dat
+[17-47-36] Rank 0 (PID 26047): my counter=580, left(rank 1)=581, right(rank 1)=581
+[17-47-36] Rank 1 (PID 26048): my counter=581, left(rank 0)=580, right(rank 0)=580
+[17-47-37] Rank 0 (PID 26047): my counter=582, left(rank 1)=583, right(rank 1)=583
+[17-47-37] Rank 1 (PID 26048): my counter=583, left(rank 0)=582, right(rank 0)=582
+[17-47-38] Rank 1 (PID 26048): my counter=585, left(rank 0)=584, right(rank 0)=584
+[17-47-38] Rank 0 (PID 26047): my counter=584, left(rank 1)=585, right(rank 1)=585
+[17-47-39] Rank 1 (PID 26048): my counter=587, left(rank 0)=586, right(rank 0)=586
+[17-47-39] Rank 0 (PID 26047): my counter=586, left(rank 1)=587, right(rank 1)=587
+[17-47-40] Rank 0 (PID 26047): my counter=588, left(rank 1)=589, right(rank 1)=589
+[17-47-40] Rank 1 (PID 26048): my counter=589, left(rank 0)=588, right(rank 0)=588
+Rank 1: Checkpoint saved (counter = 591) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 590) to checkpoint_rank0.dat
+[17-47-41] Rank 1 (PID 26048): my counter=591, left(rank 0)=590, right(rank 0)=590
+[17-47-41] Rank 0 (PID 26047): my counter=590, left(rank 1)=591, right(rank 1)=591
+[17-47-42] Rank 1 (PID 26048): my counter=593, left(rank 0)=592, right(rank 0)=592
+[17-47-42] Rank 0 (PID 26047): my counter=592, left(rank 1)=593, right(rank 1)=593
+[17-47-43] Rank 1 (PID 26048): my counter=595, left(rank 0)=594, right(rank 0)=594
+[17-47-43] Rank 0 (PID 26047): my counter=594, left(rank 1)=595, right(rank 1)=595
+[17-47-44] Rank 1 (PID 26048): my counter=597, left(rank 0)=596, right(rank 0)=596
+[17-47-44] Rank 0 (PID 26047): my counter=596, left(rank 1)=597, right(rank 1)=597
+[17-47-45] Rank 1 (PID 26048): my counter=599, left(rank 0)=598, right(rank 0)=598
+[17-47-45] Rank 0 (PID 26047): my counter=598, left(rank 1)=599, right(rank 1)=599
+Rank 1: Checkpoint saved (counter = 601) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 600) to checkpoint_rank0.dat
+[17-47-46] Rank 1 (PID 26048): my counter=601, left(rank 0)=600, right(rank 0)=600
+[17-47-46] Rank 0 (PID 26047): my counter=600, left(rank 1)=601, right(rank 1)=601
+[17-47-47] Rank 1 (PID 26048): my counter=603, left(rank 0)=602, right(rank 0)=602
+[17-47-47] Rank 0 (PID 26047): my counter=602, left(rank 1)=603, right(rank 1)=603
+[17-47-48] Rank 1 (PID 26048): my counter=605, left(rank 0)=604, right(rank 0)=604
+[17-47-48] Rank 0 (PID 26047): my counter=604, left(rank 1)=605, right(rank 1)=605
+[17-47-49] Rank 1 (PID 26048): my counter=607, left(rank 0)=606, right(rank 0)=606
+[17-47-49] Rank 0 (PID 26047): my counter=606, left(rank 1)=607, right(rank 1)=607
+[17-47-50] Rank 1 (PID 26048): my counter=609, left(rank 0)=608, right(rank 0)=608
+[17-47-50] Rank 0 (PID 26047): my counter=608, left(rank 1)=609, right(rank 1)=609
+Rank 0: Checkpoint saved (counter = 610) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 611) to checkpoint_rank1.dat
+[17-47-51] Rank 0 (PID 26047): my counter=610, left(rank 1)=611, right(rank 1)=611
+[17-47-51] Rank 1 (PID 26048): my counter=611, left(rank 0)=610, right(rank 0)=610
+[17-47-52] Rank 0 (PID 26047): my counter=612, left(rank 1)=613, right(rank 1)=613
+[17-47-52] Rank 1 (PID 26048): my counter=613, left(rank 0)=612, right(rank 0)=612
+[17-47-53] Rank 0 (PID 26047): my counter=614, left(rank 1)=615, right(rank 1)=615
+[17-47-53] Rank 1 (PID 26048): my counter=615, left(rank 0)=614, right(rank 0)=614
+[17-47-54] Rank 0 (PID 26047): my counter=616, left(rank 1)=617, right(rank 1)=617
+[17-47-54] Rank 1 (PID 26048): my counter=617, left(rank 0)=616, right(rank 0)=616
+[17-47-55] Rank 0 (PID 26047): my counter=618, left(rank 1)=619, right(rank 1)=619
+[17-47-55] Rank 1 (PID 26048): my counter=619, left(rank 0)=618, right(rank 0)=618
+Rank 0: Checkpoint saved (counter = 620) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 621) to checkpoint_rank1.dat
+[17-47-56] Rank 1 (PID 26048): my counter=621, left(rank 0)=620, right(rank 0)=620
+[17-47-56] Rank 0 (PID 26047): my counter=620, left(rank 1)=621, right(rank 1)=621
+[17-47-57] Rank 1 (PID 26048): my counter=623, left(rank 0)=622, right(rank 0)=622
+[17-47-57] Rank 0 (PID 26047): my counter=622, left(rank 1)=623, right(rank 1)=623
+[17-47-58] Rank 1 (PID 26048): my counter=625, left(rank 0)=624, right(rank 0)=624
+[17-47-58] Rank 0 (PID 26047): my counter=624, left(rank 1)=625, right(rank 1)=625
+[17-47-59] Rank 1 (PID 26048): my counter=627, left(rank 0)=626, right(rank 0)=626
+[17-47-59] Rank 0 (PID 26047): my counter=626, left(rank 1)=627, right(rank 1)=627
+[17-48-00] Rank 0 (PID 26047): my counter=628, left(rank 1)=629, right(rank 1)=629
+[17-48-00] Rank 1 (PID 26048): my counter=629, left(rank 0)=628, right(rank 0)=628
+Rank 0: Checkpoint saved (counter = 630) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 631) to checkpoint_rank1.dat
+[17-48-01] Rank 0 (PID 26047): my counter=630, left(rank 1)=631, right(rank 1)=631
+[17-48-01] Rank 1 (PID 26048): my counter=631, left(rank 0)=630, right(rank 0)=630
+[17-48-02] Rank 1 (PID 26048): my counter=633, left(rank 0)=632, right(rank 0)=632
+[17-48-02] Rank 0 (PID 26047): my counter=632, left(rank 1)=633, right(rank 1)=633
+[17-48-03] Rank 1 (PID 26048): my counter=635, left(rank 0)=634, right(rank 0)=634
+[17-48-03] Rank 0 (PID 26047): my counter=634, left(rank 1)=635, right(rank 1)=635
+[17-48-04] Rank 1 (PID 26048): my counter=637, left(rank 0)=636, right(rank 0)=636
+[17-48-04] Rank 0 (PID 26047): my counter=636, left(rank 1)=637, right(rank 1)=637
+[17-48-05] Rank 1 (PID 26048): my counter=639, left(rank 0)=638, right(rank 0)=638
+[17-48-05] Rank 0 (PID 26047): my counter=638, left(rank 1)=639, right(rank 1)=639
+Rank 0: Checkpoint saved (counter = 640) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 641) to checkpoint_rank1.dat
+[17-48-06] Rank 0 (PID 26047): my counter=640, left(rank 1)=641, right(rank 1)=641
+[17-48-06] Rank 1 (PID 26048): my counter=641, left(rank 0)=640, right(rank 0)=640
+[17-48-07] Rank 0 (PID 26047): my counter=642, left(rank 1)=643, right(rank 1)=643
+[17-48-07] Rank 1 (PID 26048): my counter=643, left(rank 0)=642, right(rank 0)=642
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #11 ===
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 641)
+[17-48-08] Rank 1 (PID 26184) started with counter = 641
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 640)
+[17-48-08] Rank 0 (PID 26183) started with counter = 640
+[17-48-08] Rank 1 (PID 26184): my counter=641, left(rank 0)=640, right(rank 0)=640
+[17-48-08] Rank 0 (PID 26183): my counter=640, left(rank 1)=641, right(rank 1)=641
+[17-48-09] Rank 1 (PID 26184): my counter=643, left(rank 0)=642, right(rank 0)=642
+[17-48-09] Rank 0 (PID 26183): my counter=642, left(rank 1)=643, right(rank 1)=643
+[17-48-10] Rank 1 (PID 26184): my counter=645, left(rank 0)=644, right(rank 0)=644
+[17-48-10] Rank 0 (PID 26183): my counter=644, left(rank 1)=645, right(rank 1)=645
+[17-48-11] Rank 1 (PID 26184): my counter=647, left(rank 0)=646, right(rank 0)=646
+[17-48-11] Rank 0 (PID 26183): my counter=646, left(rank 1)=647, right(rank 1)=647
+[17-48-12] Rank 1 (PID 26184): my counter=649, left(rank 0)=648, right(rank 0)=648
+[17-48-12] Rank 0 (PID 26183): my counter=648, left(rank 1)=649, right(rank 1)=649
+Rank 0: Checkpoint saved (counter = 650) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 651) to checkpoint_rank1.dat
+[17-48-13] Rank 0 (PID 26183): my counter=650, left(rank 1)=651, right(rank 1)=651
+[17-48-13] Rank 1 (PID 26184): my counter=651, left(rank 0)=650, right(rank 0)=650
+[17-48-14] Rank 0 (PID 26183): my counter=652, left(rank 1)=653, right(rank 1)=653
+[17-48-14] Rank 1 (PID 26184): my counter=653, left(rank 0)=652, right(rank 0)=652
+[17-48-15] Rank 0 (PID 26183): my counter=654, left(rank 1)=655, right(rank 1)=655
+[17-48-15] Rank 1 (PID 26184): my counter=655, left(rank 0)=654, right(rank 0)=654
+[17-48-16] Rank 0 (PID 26183): my counter=656, left(rank 1)=657, right(rank 1)=657
+[17-48-16] Rank 1 (PID 26184): my counter=657, left(rank 0)=656, right(rank 0)=656
+[17-48-17] Rank 0 (PID 26183): my counter=658, left(rank 1)=659, right(rank 1)=659
+[17-48-17] Rank 1 (PID 26184): my counter=659, left(rank 0)=658, right(rank 0)=658
+Rank 0: Checkpoint saved (counter = 660) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 661) to checkpoint_rank1.dat
+[17-48-18] Rank 0 (PID 26183): my counter=660, left(rank 1)=661, right(rank 1)=661
+[17-48-18] Rank 1 (PID 26184): my counter=661, left(rank 0)=660, right(rank 0)=660
+[17-48-19] Rank 0 (PID 26183): my counter=662, left(rank 1)=663, right(rank 1)=663
+[17-48-19] Rank 1 (PID 26184): my counter=663, left(rank 0)=662, right(rank 0)=662
+[17-48-20] Rank 0 (PID 26183): my counter=664, left(rank 1)=665, right(rank 1)=665
+[17-48-20] Rank 1 (PID 26184): my counter=665, left(rank 0)=664, right(rank 0)=664
+[17-48-21] Rank 0 (PID 26183): my counter=666, left(rank 1)=667, right(rank 1)=667
+[17-48-21] Rank 1 (PID 26184): my counter=667, left(rank 0)=666, right(rank 0)=666
+[17-48-22] Rank 0 (PID 26183): my counter=668, left(rank 1)=669, right(rank 1)=669
+[17-48-22] Rank 1 (PID 26184): my counter=669, left(rank 0)=668, right(rank 0)=668
+Rank 0: Checkpoint saved (counter = 670) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 671) to checkpoint_rank1.dat
+[17-48-23] Rank 0 (PID 26183): my counter=670, left(rank 1)=671, right(rank 1)=671
+[17-48-23] Rank 1 (PID 26184): my counter=671, left(rank 0)=670, right(rank 0)=670
+[17-48-24] Rank 0 (PID 26183): my counter=672, left(rank 1)=673, right(rank 1)=673
+[17-48-24] Rank 1 (PID 26184): my counter=673, left(rank 0)=672, right(rank 0)=672
+[17-48-25] Rank 0 (PID 26183): my counter=674, left(rank 1)=675, right(rank 1)=675
+[17-48-25] Rank 1 (PID 26184): my counter=675, left(rank 0)=674, right(rank 0)=674
+[17-48-26] Rank 0 (PID 26183): my counter=676, left(rank 1)=677, right(rank 1)=677
+[17-48-26] Rank 1 (PID 26184): my counter=677, left(rank 0)=676, right(rank 0)=676
+[17-48-27] Rank 0 (PID 26183): my counter=678, left(rank 1)=679, right(rank 1)=679
+[17-48-27] Rank 1 (PID 26184): my counter=679, left(rank 0)=678, right(rank 0)=678
+Rank 0: Checkpoint saved (counter = 680) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 681) to checkpoint_rank1.dat
+[17-48-28] Rank 0 (PID 26183): my counter=680, left(rank 1)=681, right(rank 1)=681
+[17-48-28] Rank 1 (PID 26184): my counter=681, left(rank 0)=680, right(rank 0)=680
+[17-48-29] Rank 1 (PID 26184): my counter=683, left(rank 0)=682, right(rank 0)=682
+[17-48-29] Rank 0 (PID 26183): my counter=682, left(rank 1)=683, right(rank 1)=683
+[17-48-30] Rank 1 (PID 26184): my counter=685, left(rank 0)=684, right(rank 0)=684
+[17-48-30] Rank 0 (PID 26183): my counter=684, left(rank 1)=685, right(rank 1)=685
+[17-48-31] Rank 0 (PID 26183): my counter=686, left(rank 1)=687, right(rank 1)=687
+[17-48-31] Rank 1 (PID 26184): my counter=687, left(rank 0)=686, right(rank 0)=686
+[17-48-32] Rank 0 (PID 26183): my counter=688, left(rank 1)=689, right(rank 1)=689
+[17-48-32] Rank 1 (PID 26184): my counter=689, left(rank 0)=688, right(rank 0)=688
+Rank 0: Checkpoint saved (counter = 690) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 691) to checkpoint_rank1.dat
+[17-48-33] Rank 0 (PID 26183): my counter=690, left(rank 1)=691, right(rank 1)=691
+[17-48-33] Rank 1 (PID 26184): my counter=691, left(rank 0)=690, right(rank 0)=690
+[17-48-34] Rank 0 (PID 26183): my counter=692, left(rank 1)=693, right(rank 1)=693
+[17-48-34] Rank 1 (PID 26184): my counter=693, left(rank 0)=692, right(rank 0)=692
+[17-48-35] Rank 0 (PID 26183): my counter=694, left(rank 1)=695, right(rank 1)=695
+[17-48-35] Rank 1 (PID 26184): my counter=695, left(rank 0)=694, right(rank 0)=694
+[17-48-36] Rank 0 (PID 26183): my counter=696, left(rank 1)=697, right(rank 1)=697
+[17-48-36] Rank 1 (PID 26184): my counter=697, left(rank 0)=696, right(rank 0)=696
+[17-48-37] Rank 1 (PID 26184): my counter=699, left(rank 0)=698, right(rank 0)=698
+[17-48-37] Rank 0 (PID 26183): my counter=698, left(rank 1)=699, right(rank 1)=699
+Rank 0: Checkpoint saved (counter = 700) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 701) to checkpoint_rank1.dat
+[17-48-38] Rank 1 (PID 26184): my counter=701, left(rank 0)=700, right(rank 0)=700
+[17-48-38] Rank 0 (PID 26183): my counter=700, left(rank 1)=701, right(rank 1)=701
+[17-48-39] Rank 0 (PID 26183): my counter=702, left(rank 1)=703, right(rank 1)=703
+[17-48-39] Rank 1 (PID 26184): my counter=703, left(rank 0)=702, right(rank 0)=702
+[17-48-40] Rank 1 (PID 26184): my counter=705, left(rank 0)=704, right(rank 0)=704
+[17-48-40] Rank 0 (PID 26183): my counter=704, left(rank 1)=705, right(rank 1)=705
+[17-48-41] Rank 1 (PID 26184): my counter=707, left(rank 0)=706, right(rank 0)=706
+[17-48-41] Rank 0 (PID 26183): my counter=706, left(rank 1)=707, right(rank 1)=707
+[17-48-42] Rank 1 (PID 26184): my counter=709, left(rank 0)=708, right(rank 0)=708
+[17-48-42] Rank 0 (PID 26183): my counter=708, left(rank 1)=709, right(rank 1)=709
+Rank 0: Checkpoint saved (counter = 710) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 711) to checkpoint_rank1.dat
+[17-48-43] Rank 1 (PID 26184): my counter=711, left(rank 0)=710, right(rank 0)=710
+[17-48-43] Rank 0 (PID 26183): my counter=710, left(rank 1)=711, right(rank 1)=711
+[17-48-44] Rank 0 (PID 26183): my counter=712, left(rank 1)=713, right(rank 1)=713
+[17-48-44] Rank 1 (PID 26184): my counter=713, left(rank 0)=712, right(rank 0)=712
+[17-48-45] Rank 0 (PID 26183): my counter=714, left(rank 1)=715, right(rank 1)=715
+[17-48-45] Rank 1 (PID 26184): my counter=715, left(rank 0)=714, right(rank 0)=714
+[17-48-46] Rank 0 (PID 26183): my counter=716, left(rank 1)=717, right(rank 1)=717
+[17-48-46] Rank 1 (PID 26184): my counter=717, left(rank 0)=716, right(rank 0)=716
+[17-48-47] Rank 0 (PID 26183): my counter=718, left(rank 1)=719, right(rank 1)=719
+[17-48-47] Rank 1 (PID 26184): my counter=719, left(rank 0)=718, right(rank 0)=718
+Rank 0: Checkpoint saved (counter = 720) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 721) to checkpoint_rank1.dat
+[17-48-48] Rank 1 (PID 26184): my counter=721, left(rank 0)=720, right(rank 0)=720
+[17-48-48] Rank 0 (PID 26183): my counter=720, left(rank 1)=721, right(rank 1)=721
+[17-48-49] Rank 0 (PID 26183): my counter=722, left(rank 1)=723, right(rank 1)=723
+[17-48-49] Rank 1 (PID 26184): my counter=723, left(rank 0)=722, right(rank 0)=722
+[17-48-50] Rank 0 (PID 26183): my counter=724, left(rank 1)=725, right(rank 1)=725
+[17-48-50] Rank 1 (PID 26184): my counter=725, left(rank 0)=724, right(rank 0)=724
+[17-48-51] Rank 1 (PID 26184): my counter=727, left(rank 0)=726, right(rank 0)=726
+[17-48-51] Rank 0 (PID 26183): my counter=726, left(rank 1)=727, right(rank 1)=727
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #12 ===
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 731)
+[17-48-52] Rank 1 (PID 26270) started with counter = 731
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 730)
+[17-48-52] Rank 0 (PID 26269) started with counter = 730
+[17-48-52] Rank 1 (PID 26270): my counter=731, left(rank 0)=730, right(rank 0)=730
+[17-48-52] Rank 0 (PID 26269): my counter=730, left(rank 1)=731, right(rank 1)=731
+[17-48-53] Rank 0 (PID 26269): my counter=732, left(rank 1)=733, right(rank 1)=733
+[17-48-53] Rank 1 (PID 26270): my counter=733, left(rank 0)=732, right(rank 0)=732
+[17-48-54] Rank 0 (PID 26269): my counter=734, left(rank 1)=735, right(rank 1)=735
+[17-48-54] Rank 1 (PID 26270): my counter=735, left(rank 0)=734, right(rank 0)=734
+[17-48-55] Rank 0 (PID 26269): my counter=736, left(rank 1)=737, right(rank 1)=737
+[17-48-55] Rank 1 (PID 26270): my counter=737, left(rank 0)=736, right(rank 0)=736
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #13 ===
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 740)
+[17-48-56] Rank 0 (PID 26285) started with counter = 740
+[17-48-56] Rank 0 (PID 26285): my counter=740, left(rank 1)=741, right(rank 1)=741
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 741)
+[17-48-56] Rank 1 (PID 26286) started with counter = 741
+[17-48-56] Rank 1 (PID 26286): my counter=741, left(rank 0)=740, right(rank 0)=740
+[17-48-57] Rank 0 (PID 26285): my counter=742, left(rank 1)=743, right(rank 1)=743
+[17-48-57] Rank 1 (PID 26286): my counter=743, left(rank 0)=742, right(rank 0)=742
+[17-48-58] Rank 0 (PID 26285): my counter=744, left(rank 1)=745, right(rank 1)=745
+[17-48-58] Rank 1 (PID 26286): my counter=745, left(rank 0)=744, right(rank 0)=744
+[17-48-59] Rank 0 (PID 26285): my counter=746, left(rank 1)=747, right(rank 1)=747
+[17-48-59] Rank 1 (PID 26286): my counter=747, left(rank 0)=746, right(rank 0)=746
+[17-49-00] Rank 0 (PID 26285): my counter=748, left(rank 1)=749, right(rank 1)=749
+[17-49-00] Rank 1 (PID 26286): my counter=749, left(rank 0)=748, right(rank 0)=748
+Rank 0: Checkpoint saved (counter = 750) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 751) to checkpoint_rank1.dat
+[17-49-01] Rank 0 (PID 26285): my counter=750, left(rank 1)=751, right(rank 1)=751
+[17-49-01] Rank 1 (PID 26286): my counter=751, left(rank 0)=750, right(rank 0)=750
+[17-49-02] Rank 0 (PID 26285): my counter=752, left(rank 1)=753, right(rank 1)=753
+[17-49-02] Rank 1 (PID 26286): my counter=753, left(rank 0)=752, right(rank 0)=752
+[17-49-03] Rank 0 (PID 26285): my counter=754, left(rank 1)=755, right(rank 1)=755
+[17-49-03] Rank 1 (PID 26286): my counter=755, left(rank 0)=754, right(rank 0)=754
+[17-49-04] Rank 0 (PID 26285): my counter=756, left(rank 1)=757, right(rank 1)=757
+[17-49-04] Rank 1 (PID 26286): my counter=757, left(rank 0)=756, right(rank 0)=756
+[17-49-05] Rank 0 (PID 26285): my counter=758, left(rank 1)=759, right(rank 1)=759
+[17-49-05] Rank 1 (PID 26286): my counter=759, left(rank 0)=758, right(rank 0)=758
+Rank 1: Checkpoint saved (counter = 761) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 760) to checkpoint_rank0.dat
+[17-49-06] Rank 1 (PID 26286): my counter=761, left(rank 0)=760, right(rank 0)=760
+[17-49-06] Rank 0 (PID 26285): my counter=760, left(rank 1)=761, right(rank 1)=761
+[17-49-07] Rank 1 (PID 26286): my counter=763, left(rank 0)=762, right(rank 0)=762
+[17-49-07] Rank 0 (PID 26285): my counter=762, left(rank 1)=763, right(rank 1)=763
+[17-49-08] Rank 1 (PID 26286): my counter=765, left(rank 0)=764, right(rank 0)=764
+[17-49-08] Rank 0 (PID 26285): my counter=764, left(rank 1)=765, right(rank 1)=765
+[17-49-09] Rank 1 (PID 26286): my counter=767, left(rank 0)=766, right(rank 0)=766
+[17-49-09] Rank 0 (PID 26285): my counter=766, left(rank 1)=767, right(rank 1)=767
+[17-49-10] Rank 1 (PID 26286): my counter=769, left(rank 0)=768, right(rank 0)=768
+[17-49-10] Rank 0 (PID 26285): my counter=768, left(rank 1)=769, right(rank 1)=769
+Rank 1: Checkpoint saved (counter = 771) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 770) to checkpoint_rank0.dat
+[17-49-11] Rank 1 (PID 26286): my counter=771, left(rank 0)=770, right(rank 0)=770
+[17-49-11] Rank 0 (PID 26285): my counter=770, left(rank 1)=771, right(rank 1)=771
+[17-49-12] Rank 1 (PID 26286): my counter=773, left(rank 0)=772, right(rank 0)=772
+[17-49-12] Rank 0 (PID 26285): my counter=772, left(rank 1)=773, right(rank 1)=773
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #14 ===
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 770)
+[17-49-14] Rank 0 (PID 26326) started with counter = 770
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 771)
+[17-49-14] Rank 1 (PID 26327) started with counter = 771
+[17-49-14] Rank 0 (PID 26326): my counter=770, left(rank 1)=771, right(rank 1)=771
+[17-49-14] Rank 1 (PID 26327): my counter=771, left(rank 0)=770, right(rank 0)=770
+[17-49-15] Rank 0 (PID 26326): my counter=772, left(rank 1)=773, right(rank 1)=773
+[17-49-15] Rank 1 (PID 26327): my counter=773, left(rank 0)=772, right(rank 0)=772
+[17-49-16] Rank 0 (PID 26326): my counter=774, left(rank 1)=775, right(rank 1)=775
+[17-49-16] Rank 1 (PID 26327): my counter=775, left(rank 0)=774, right(rank 0)=774
+[17-49-17] Rank 0 (PID 26326): my counter=776, left(rank 1)=777, right(rank 1)=777
+[17-49-17] Rank 1 (PID 26327): my counter=777, left(rank 0)=776, right(rank 0)=776
+[17-49-18] Rank 0 (PID 26326): my counter=778, left(rank 1)=779, right(rank 1)=779
+[17-49-18] Rank 1 (PID 26327): my counter=779, left(rank 0)=778, right(rank 0)=778
+Rank 1: Checkpoint saved (counter = 781) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 780) to checkpoint_rank0.dat
+[17-49-19] Rank 1 (PID 26327): my counter=781, left(rank 0)=780, right(rank 0)=780
+[17-49-19] Rank 0 (PID 26326): my counter=780, left(rank 1)=781, right(rank 1)=781
+[17-49-20] Rank 0 (PID 26326): my counter=782, left(rank 1)=783, right(rank 1)=783
+[17-49-20] Rank 1 (PID 26327): my counter=783, left(rank 0)=782, right(rank 0)=782
+[17-49-21] Rank 0 (PID 26326): my counter=784, left(rank 1)=785, right(rank 1)=785
+[17-49-21] Rank 1 (PID 26327): my counter=785, left(rank 0)=784, right(rank 0)=784
+[17-49-22] Rank 0 (PID 26326): my counter=786, left(rank 1)=787, right(rank 1)=787
+[17-49-22] Rank 1 (PID 26327): my counter=787, left(rank 0)=786, right(rank 0)=786
+[17-49-23] Rank 0 (PID 26326): my counter=788, left(rank 1)=789, right(rank 1)=789
+[17-49-23] Rank 1 (PID 26327): my counter=789, left(rank 0)=788, right(rank 0)=788
+Rank 1: Checkpoint saved (counter = 791) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 790) to checkpoint_rank0.dat
+[17-49-24] Rank 1 (PID 26327): my counter=791, left(rank 0)=790, right(rank 0)=790
+[17-49-24] Rank 0 (PID 26326): my counter=790, left(rank 1)=791, right(rank 1)=791
+[17-49-25] Rank 1 (PID 26327): my counter=793, left(rank 0)=792, right(rank 0)=792
+[17-49-25] Rank 0 (PID 26326): my counter=792, left(rank 1)=793, right(rank 1)=793
+[17-49-26] Rank 1 (PID 26327): my counter=795, left(rank 0)=794, right(rank 0)=794
+[17-49-26] Rank 0 (PID 26326): my counter=794, left(rank 1)=795, right(rank 1)=795
+[17-49-27] Rank 1 (PID 26327): my counter=797, left(rank 0)=796, right(rank 0)=796
+[17-49-27] Rank 0 (PID 26326): my counter=796, left(rank 1)=797, right(rank 1)=797
+[17-49-28] Rank 0 (PID 26326): my counter=798, left(rank 1)=799, right(rank 1)=799
+[17-49-28] Rank 1 (PID 26327): my counter=799, left(rank 0)=798, right(rank 0)=798
+Rank 1: Checkpoint saved (counter = 801) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 800) to checkpoint_rank0.dat
+[17-49-29] Rank 1 (PID 26327): my counter=801, left(rank 0)=800, right(rank 0)=800
+[17-49-29] Rank 0 (PID 26326): my counter=800, left(rank 1)=801, right(rank 1)=801
+[17-49-30] Rank 1 (PID 26327): my counter=803, left(rank 0)=802, right(rank 0)=802
+[17-49-30] Rank 0 (PID 26326): my counter=802, left(rank 1)=803, right(rank 1)=803
+[17-49-31] Rank 1 (PID 26327): my counter=805, left(rank 0)=804, right(rank 0)=804
+[17-49-31] Rank 0 (PID 26326): my counter=804, left(rank 1)=805, right(rank 1)=805
+[17-49-32] Rank 1 (PID 26327): my counter=807, left(rank 0)=806, right(rank 0)=806
+[17-49-32] Rank 0 (PID 26326): my counter=806, left(rank 1)=807, right(rank 1)=807
+[17-49-33] Rank 1 (PID 26327): my counter=809, left(rank 0)=808, right(rank 0)=808
+[17-49-33] Rank 0 (PID 26326): my counter=808, left(rank 1)=809, right(rank 1)=809
+Rank 0: Checkpoint saved (counter = 810) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 811) to checkpoint_rank1.dat
+[17-49-34] Rank 0 (PID 26326): my counter=810, left(rank 1)=811, right(rank 1)=811
+[17-49-34] Rank 1 (PID 26327): my counter=811, left(rank 0)=810, right(rank 0)=810
+[17-49-35] Rank 0 (PID 26326): my counter=812, left(rank 1)=813, right(rank 1)=813
+[17-49-35] Rank 1 (PID 26327): my counter=813, left(rank 0)=812, right(rank 0)=812
+[17-49-36] Rank 1 (PID 26327): my counter=815, left(rank 0)=814, right(rank 0)=814
+[17-49-36] Rank 0 (PID 26326): my counter=814, left(rank 1)=815, right(rank 1)=815
+[17-49-37] Rank 1 (PID 26327): my counter=817, left(rank 0)=816, right(rank 0)=816
+[17-49-37] Rank 0 (PID 26326): my counter=816, left(rank 1)=817, right(rank 1)=817
+[17-49-38] Rank 1 (PID 26327): my counter=819, left(rank 0)=818, right(rank 0)=818
+[17-49-38] Rank 0 (PID 26326): my counter=818, left(rank 1)=819, right(rank 1)=819
+Rank 1: Checkpoint saved (counter = 821) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 820) to checkpoint_rank0.dat
+[17-49-39] Rank 1 (PID 26327): my counter=821, left(rank 0)=820, right(rank 0)=820
+[17-49-39] Rank 0 (PID 26326): my counter=820, left(rank 1)=821, right(rank 1)=821
+[17-49-40] Rank 1 (PID 26327): my counter=823, left(rank 0)=822, right(rank 0)=822
+[17-49-40] Rank 0 (PID 26326): my counter=822, left(rank 1)=823, right(rank 1)=823
+[17-49-41] Rank 1 (PID 26327): my counter=825, left(rank 0)=824, right(rank 0)=824
+[17-49-41] Rank 0 (PID 26326): my counter=824, left(rank 1)=825, right(rank 1)=825
+[17-49-42] Rank 1 (PID 26327): my counter=827, left(rank 0)=826, right(rank 0)=826
+[17-49-42] Rank 0 (PID 26326): my counter=826, left(rank 1)=827, right(rank 1)=827
+[17-49-43] Rank 1 (PID 26327): my counter=829, left(rank 0)=828, right(rank 0)=828
+[17-49-43] Rank 0 (PID 26326): my counter=828, left(rank 1)=829, right(rank 1)=829
+Rank 0: Checkpoint saved (counter = 830) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 831) to checkpoint_rank1.dat
+[17-49-44] Rank 1 (PID 26327): my counter=831, left(rank 0)=830, right(rank 0)=830
+[17-49-44] Rank 0 (PID 26326): my counter=830, left(rank 1)=831, right(rank 1)=831
+[17-49-45] Rank 1 (PID 26327): my counter=833, left(rank 0)=832, right(rank 0)=832
+[17-49-45] Rank 0 (PID 26326): my counter=832, left(rank 1)=833, right(rank 1)=833
+[17-49-46] Rank 1 (PID 26327): my counter=835, left(rank 0)=834, right(rank 0)=834
+[17-49-46] Rank 0 (PID 26326): my counter=834, left(rank 1)=835, right(rank 1)=835
+[17-49-47] Rank 1 (PID 26327): my counter=837, left(rank 0)=836, right(rank 0)=836
+[17-49-47] Rank 0 (PID 26326): my counter=836, left(rank 1)=837, right(rank 1)=837
+[17-49-48] Rank 1 (PID 26327): my counter=839, left(rank 0)=838, right(rank 0)=838
+[17-49-48] Rank 0 (PID 26326): my counter=838, left(rank 1)=839, right(rank 1)=839
+Rank 0: Checkpoint saved (counter = 840) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 841) to checkpoint_rank1.dat
+[17-49-49] Rank 0 (PID 26326): my counter=840, left(rank 1)=841, right(rank 1)=841
+[17-49-49] Rank 1 (PID 26327): my counter=841, left(rank 0)=840, right(rank 0)=840
+[17-49-50] Rank 0 (PID 26326): my counter=842, left(rank 1)=843, right(rank 1)=843
+[17-49-50] Rank 1 (PID 26327): my counter=843, left(rank 0)=842, right(rank 0)=842
+[17-49-51] Rank 0 (PID 26326): my counter=844, left(rank 1)=845, right(rank 1)=845
+[17-49-51] Rank 1 (PID 26327): my counter=845, left(rank 0)=844, right(rank 0)=844
+[17-49-52] Rank 0 (PID 26326): my counter=846, left(rank 1)=847, right(rank 1)=847
+[17-49-52] Rank 1 (PID 26327): my counter=847, left(rank 0)=846, right(rank 0)=846
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #15 ===
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 840)
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 841)
+[17-49-55] Rank 1 (PID 26398) started with counter = 841
+[17-49-55] Rank 1 (PID 26398): my counter=841, left(rank 0)=840, right(rank 0)=840
+[17-49-55] Rank 0 (PID 26397) started with counter = 840
+[17-49-55] Rank 0 (PID 26397): my counter=840, left(rank 1)=841, right(rank 1)=841
+[17-49-56] Rank 1 (PID 26398): my counter=843, left(rank 0)=842, right(rank 0)=842
+[17-49-56] Rank 0 (PID 26397): my counter=842, left(rank 1)=843, right(rank 1)=843
+[17-49-57] Rank 1 (PID 26398): my counter=845, left(rank 0)=844, right(rank 0)=844
+[17-49-57] Rank 0 (PID 26397): my counter=844, left(rank 1)=845, right(rank 1)=845
+[17-49-58] Rank 1 (PID 26398): my counter=847, left(rank 0)=846, right(rank 0)=846
+[17-49-58] Rank 0 (PID 26397): my counter=846, left(rank 1)=847, right(rank 1)=847
+[17-49-59] Rank 1 (PID 26398): my counter=849, left(rank 0)=848, right(rank 0)=848
+[17-49-59] Rank 0 (PID 26397): my counter=848, left(rank 1)=849, right(rank 1)=849
+Rank 0: Checkpoint saved (counter = 850) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 851) to checkpoint_rank1.dat
+[17-50-00] Rank 0 (PID 26397): my counter=850, left(rank 1)=851, right(rank 1)=851
+[17-50-00] Rank 1 (PID 26398): my counter=851, left(rank 0)=850, right(rank 0)=850
+[17-50-01] Rank 0 (PID 26397): my counter=852, left(rank 1)=853, right(rank 1)=853
+[17-50-01] Rank 1 (PID 26398): my counter=853, left(rank 0)=852, right(rank 0)=852
+[17-50-02] Rank 0 (PID 26397): my counter=854, left(rank 1)=855, right(rank 1)=855
+[17-50-02] Rank 1 (PID 26398): my counter=855, left(rank 0)=854, right(rank 0)=854
+[17-50-03] Rank 0 (PID 26397): my counter=856, left(rank 1)=857, right(rank 1)=857
+[17-50-03] Rank 1 (PID 26398): my counter=857, left(rank 0)=856, right(rank 0)=856
+[17-50-04] Rank 0 (PID 26397): my counter=858, left(rank 1)=859, right(rank 1)=859
+[17-50-04] Rank 1 (PID 26398): my counter=859, left(rank 0)=858, right(rank 0)=858
+Rank 1: Checkpoint saved (counter = 861) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 860) to checkpoint_rank0.dat
+[17-50-05] Rank 1 (PID 26398): my counter=861, left(rank 0)=860, right(rank 0)=860
+[17-50-05] Rank 0 (PID 26397): my counter=860, left(rank 1)=861, right(rank 1)=861
+[17-50-06] Rank 0 (PID 26397): my counter=862, left(rank 1)=863, right(rank 1)=863
+[17-50-06] Rank 1 (PID 26398): my counter=863, left(rank 0)=862, right(rank 0)=862
+[17-50-07] Rank 0 (PID 26397): my counter=864, left(rank 1)=865, right(rank 1)=865
+[17-50-07] Rank 1 (PID 26398): my counter=865, left(rank 0)=864, right(rank 0)=864
+[17-50-08] Rank 0 (PID 26397): my counter=866, left(rank 1)=867, right(rank 1)=867
+[17-50-08] Rank 1 (PID 26398): my counter=867, left(rank 0)=866, right(rank 0)=866
+[17-50-09] Rank 0 (PID 26397): my counter=868, left(rank 1)=869, right(rank 1)=869
+[17-50-09] Rank 1 (PID 26398): my counter=869, left(rank 0)=868, right(rank 0)=868
+Rank 0: Checkpoint saved (counter = 870) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 871) to checkpoint_rank1.dat
+[17-50-10] Rank 0 (PID 26397): my counter=870, left(rank 1)=871, right(rank 1)=871
+[17-50-10] Rank 1 (PID 26398): my counter=871, left(rank 0)=870, right(rank 0)=870
+[17-50-11] Rank 0 (PID 26397): my counter=872, left(rank 1)=873, right(rank 1)=873
+[17-50-11] Rank 1 (PID 26398): my counter=873, left(rank 0)=872, right(rank 0)=872
+[17-50-12] Rank 0 (PID 26397): my counter=874, left(rank 1)=875, right(rank 1)=875
+[17-50-12] Rank 1 (PID 26398): my counter=875, left(rank 0)=874, right(rank 0)=874
+[17-50-13] Rank 0 (PID 26397): my counter=876, left(rank 1)=877, right(rank 1)=877
+[17-50-13] Rank 1 (PID 26398): my counter=877, left(rank 0)=876, right(rank 0)=876
+[17-50-14] Rank 0 (PID 26397): my counter=878, left(rank 1)=879, right(rank 1)=879
+[17-50-14] Rank 1 (PID 26398): my counter=879, left(rank 0)=878, right(rank 0)=878
+Rank 1: Checkpoint saved (counter = 881) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 880) to checkpoint_rank0.dat
+[17-50-15] Rank 1 (PID 26398): my counter=881, left(rank 0)=880, right(rank 0)=880
+[17-50-15] Rank 0 (PID 26397): my counter=880, left(rank 1)=881, right(rank 1)=881
+[17-50-16] Rank 1 (PID 26398): my counter=883, left(rank 0)=882, right(rank 0)=882
+[17-50-16] Rank 0 (PID 26397): my counter=882, left(rank 1)=883, right(rank 1)=883
+[17-50-17] Rank 0 (PID 26397): my counter=884, left(rank 1)=885, right(rank 1)=885
+[17-50-17] Rank 1 (PID 26398): my counter=885, left(rank 0)=884, right(rank 0)=884
+[17-50-18] Rank 1 (PID 26398): my counter=887, left(rank 0)=886, right(rank 0)=886
+[17-50-18] Rank 0 (PID 26397): my counter=886, left(rank 1)=887, right(rank 1)=887
+[17-50-19] Rank 1 (PID 26398): my counter=889, left(rank 0)=888, right(rank 0)=888
+[17-50-19] Rank 0 (PID 26397): my counter=888, left(rank 1)=889, right(rank 1)=889
+Rank 1: Checkpoint saved (counter = 891) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 890) to checkpoint_rank0.dat
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #16 ===
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 891)
+[17-50-20] Rank 1 (PID 26449) started with counter = 891
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 890)
+[17-50-20] Rank 0 (PID 26448) started with counter = 890
+[17-50-20] Rank 1 (PID 26449): my counter=891, left(rank 0)=890, right(rank 0)=890
+[17-50-20] Rank 0 (PID 26448): my counter=890, left(rank 1)=891, right(rank 1)=891
+[17-50-21] Rank 1 (PID 26449): my counter=893, left(rank 0)=892, right(rank 0)=892
+[17-50-21] Rank 0 (PID 26448): my counter=892, left(rank 1)=893, right(rank 1)=893
+[17-50-22] Rank 1 (PID 26449): my counter=895, left(rank 0)=894, right(rank 0)=894
+[17-50-22] Rank 0 (PID 26448): my counter=894, left(rank 1)=895, right(rank 1)=895
+[17-50-23] Rank 1 (PID 26449): my counter=897, left(rank 0)=896, right(rank 0)=896
+[17-50-23] Rank 0 (PID 26448): my counter=896, left(rank 1)=897, right(rank 1)=897
+[17-50-24] Rank 0 (PID 26448): my counter=898, left(rank 1)=899, right(rank 1)=899
+[17-50-24] Rank 1 (PID 26449): my counter=899, left(rank 0)=898, right(rank 0)=898
+Rank 0: Checkpoint saved (counter = 900) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 901) to checkpoint_rank1.dat
+[17-50-25] Rank 1 (PID 26449): my counter=901, left(rank 0)=900, right(rank 0)=900
+[17-50-25] Rank 0 (PID 26448): my counter=900, left(rank 1)=901, right(rank 1)=901
+[17-50-26] Rank 1 (PID 26449): my counter=903, left(rank 0)=902, right(rank 0)=902
+[17-50-26] Rank 0 (PID 26448): my counter=902, left(rank 1)=903, right(rank 1)=903
+[17-50-27] Rank 0 (PID 26448): my counter=904, left(rank 1)=905, right(rank 1)=905
+[17-50-27] Rank 1 (PID 26449): my counter=905, left(rank 0)=904, right(rank 0)=904
+[17-50-28] Rank 0 (PID 26448): my counter=906, left(rank 1)=907, right(rank 1)=907
+[17-50-28] Rank 1 (PID 26449): my counter=907, left(rank 0)=906, right(rank 0)=906
+[17-50-29] Rank 1 (PID 26449): my counter=909, left(rank 0)=908, right(rank 0)=908
+[17-50-29] Rank 0 (PID 26448): my counter=908, left(rank 1)=909, right(rank 1)=909
+Rank 0: Checkpoint saved (counter = 910) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 911) to checkpoint_rank1.dat
+[17-50-30] Rank 1 (PID 26449): my counter=911, left(rank 0)=910, right(rank 0)=910
+[17-50-30] Rank 0 (PID 26448): my counter=910, left(rank 1)=911, right(rank 1)=911
+[17-50-31] Rank 0 (PID 26448): my counter=912, left(rank 1)=913, right(rank 1)=913
+[17-50-31] Rank 1 (PID 26449): my counter=913, left(rank 0)=912, right(rank 0)=912
+[17-50-32] Rank 0 (PID 26448): my counter=914, left(rank 1)=915, right(rank 1)=915
+[17-50-32] Rank 1 (PID 26449): my counter=915, left(rank 0)=914, right(rank 0)=914
+[17-50-33] Rank 0 (PID 26448): my counter=916, left(rank 1)=917, right(rank 1)=917
+[17-50-33] Rank 1 (PID 26449): my counter=917, left(rank 0)=916, right(rank 0)=916
+[17-50-34] Rank 1 (PID 26449): my counter=919, left(rank 0)=918, right(rank 0)=918
+[17-50-34] Rank 0 (PID 26448): my counter=918, left(rank 1)=919, right(rank 1)=919
+Rank 0: Checkpoint saved (counter = 920) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 921) to checkpoint_rank1.dat
+[17-50-35] Rank 0 (PID 26448): my counter=920, left(rank 1)=921, right(rank 1)=921
+[17-50-35] Rank 1 (PID 26449): my counter=921, left(rank 0)=920, right(rank 0)=920
+[17-50-36] Rank 1 (PID 26449): my counter=923, left(rank 0)=922, right(rank 0)=922
+[17-50-36] Rank 0 (PID 26448): my counter=922, left(rank 1)=923, right(rank 1)=923
+[17-50-37] Rank 1 (PID 26449): my counter=925, left(rank 0)=924, right(rank 0)=924
+[17-50-37] Rank 0 (PID 26448): my counter=924, left(rank 1)=925, right(rank 1)=925
+[17-50-38] Rank 1 (PID 26449): my counter=927, left(rank 0)=926, right(rank 0)=926
+[17-50-38] Rank 0 (PID 26448): my counter=926, left(rank 1)=927, right(rank 1)=927
+[17-50-39] Rank 0 (PID 26448): my counter=928, left(rank 1)=929, right(rank 1)=929
+[17-50-39] Rank 1 (PID 26449): my counter=929, left(rank 0)=928, right(rank 0)=928
+Rank 0: Checkpoint saved (counter = 930) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 931) to checkpoint_rank1.dat
+[17-50-40] Rank 1 (PID 26449): my counter=931, left(rank 0)=930, right(rank 0)=930
+[17-50-40] Rank 0 (PID 26448): my counter=930, left(rank 1)=931, right(rank 1)=931
+[17-50-41] Rank 0 (PID 26448): my counter=932, left(rank 1)=933, right(rank 1)=933
+[17-50-41] Rank 1 (PID 26449): my counter=933, left(rank 0)=932, right(rank 0)=932
+[17-50-42] Rank 1 (PID 26449): my counter=935, left(rank 0)=934, right(rank 0)=934
+[17-50-42] Rank 0 (PID 26448): my counter=934, left(rank 1)=935, right(rank 1)=935
+[17-50-43] Rank 0 (PID 26448): my counter=936, left(rank 1)=937, right(rank 1)=937
+[17-50-43] Rank 1 (PID 26449): my counter=937, left(rank 0)=936, right(rank 0)=936
+[17-50-45] Rank 1 (PID 26449): my counter=939, left(rank 0)=938, right(rank 0)=938
+[17-50-45] Rank 0 (PID 26448): my counter=938, left(rank 1)=939, right(rank 1)=939
+Rank 0: Checkpoint saved (counter = 940) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 941) to checkpoint_rank1.dat
+[17-50-46] Rank 0 (PID 26448): my counter=940, left(rank 1)=941, right(rank 1)=941
+[17-50-46] Rank 1 (PID 26449): my counter=941, left(rank 0)=940, right(rank 0)=940
+[17-50-47] Rank 0 (PID 26448): my counter=942, left(rank 1)=943, right(rank 1)=943
+[17-50-47] Rank 1 (PID 26449): my counter=943, left(rank 0)=942, right(rank 0)=942
+[17-50-48] Rank 1 (PID 26449): my counter=945, left(rank 0)=944, right(rank 0)=944
+[17-50-48] Rank 0 (PID 26448): my counter=944, left(rank 1)=945, right(rank 1)=945
+[17-50-49] Rank 0 (PID 26448): my counter=946, left(rank 1)=947, right(rank 1)=947
+[17-50-49] Rank 1 (PID 26449): my counter=947, left(rank 0)=946, right(rank 0)=946
+[17-50-50] Rank 1 (PID 26449): my counter=949, left(rank 0)=948, right(rank 0)=948
+[17-50-50] Rank 0 (PID 26448): my counter=948, left(rank 1)=949, right(rank 1)=949
+Rank 0: Checkpoint saved (counter = 950) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 951) to checkpoint_rank1.dat
+=== Job failed with code 137; restarting... ===
+=== Starting attempt #17 ===
+Rank 0: Restored checkpoint from checkpoint_rank0.dat (counter = 950)
+[17-50-51] Rank 0 (PID 26509) started with counter = 950
+Rank 1: Restored checkpoint from checkpoint_rank1.dat (counter = 951)
+[17-50-51] Rank 1 (PID 26510) started with counter = 951
+[17-50-51] Rank 0 (PID 26509): my counter=950, left(rank 1)=951, right(rank 1)=951
+[17-50-51] Rank 1 (PID 26510): my counter=951, left(rank 0)=950, right(rank 0)=950
+[17-50-53] Rank 0 (PID 26509): my counter=952, left(rank 1)=953, right(rank 1)=953
+[17-50-53] Rank 1 (PID 26510): my counter=953, left(rank 0)=952, right(rank 0)=952
+[17-50-54] Rank 0 (PID 26509): my counter=954, left(rank 1)=955, right(rank 1)=955
+[17-50-54] Rank 1 (PID 26510): my counter=955, left(rank 0)=954, right(rank 0)=954
+[17-50-55] Rank 0 (PID 26509): my counter=956, left(rank 1)=957, right(rank 1)=957
+[17-50-55] Rank 1 (PID 26510): my counter=957, left(rank 0)=956, right(rank 0)=956
+[17-50-56] Rank 0 (PID 26509): my counter=958, left(rank 1)=959, right(rank 1)=959
+[17-50-56] Rank 1 (PID 26510): my counter=959, left(rank 0)=958, right(rank 0)=958
+Rank 0: Checkpoint saved (counter = 960) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 961) to checkpoint_rank1.dat
+[17-50-57] Rank 0 (PID 26509): my counter=960, left(rank 1)=961, right(rank 1)=961
+[17-50-57] Rank 1 (PID 26510): my counter=961, left(rank 0)=960, right(rank 0)=960
+[17-50-58] Rank 0 (PID 26509): my counter=962, left(rank 1)=963, right(rank 1)=963
+[17-50-58] Rank 1 (PID 26510): my counter=963, left(rank 0)=962, right(rank 0)=962
+[17-50-59] Rank 0 (PID 26509): my counter=964, left(rank 1)=965, right(rank 1)=965
+[17-50-59] Rank 1 (PID 26510): my counter=965, left(rank 0)=964, right(rank 0)=964
+[17-51-00] Rank 0 (PID 26509): my counter=966, left(rank 1)=967, right(rank 1)=967
+[17-51-00] Rank 1 (PID 26510): my counter=967, left(rank 0)=966, right(rank 0)=966
+[17-51-01] Rank 0 (PID 26509): my counter=968, left(rank 1)=969, right(rank 1)=969
+[17-51-01] Rank 1 (PID 26510): my counter=969, left(rank 0)=968, right(rank 0)=968
+Rank 0: Checkpoint saved (counter = 970) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 971) to checkpoint_rank1.dat
+[17-51-02] Rank 1 (PID 26510): my counter=971, left(rank 0)=970, right(rank 0)=970
+[17-51-02] Rank 0 (PID 26509): my counter=970, left(rank 1)=971, right(rank 1)=971
+[17-51-03] Rank 1 (PID 26510): my counter=973, left(rank 0)=972, right(rank 0)=972
+[17-51-03] Rank 0 (PID 26509): my counter=972, left(rank 1)=973, right(rank 1)=973
+[17-51-04] Rank 0 (PID 26509): my counter=974, left(rank 1)=975, right(rank 1)=975
+[17-51-04] Rank 1 (PID 26510): my counter=975, left(rank 0)=974, right(rank 0)=974
+[17-51-05] Rank 0 (PID 26509): my counter=976, left(rank 1)=977, right(rank 1)=977
+[17-51-05] Rank 1 (PID 26510): my counter=977, left(rank 0)=976, right(rank 0)=976
+[17-51-06] Rank 0 (PID 26509): my counter=978, left(rank 1)=979, right(rank 1)=979
+[17-51-06] Rank 1 (PID 26510): my counter=979, left(rank 0)=978, right(rank 0)=978
+Rank 1: Checkpoint saved (counter = 981) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 980) to checkpoint_rank0.dat
+[17-51-07] Rank 1 (PID 26510): my counter=981, left(rank 0)=980, right(rank 0)=980
+[17-51-07] Rank 0 (PID 26509): my counter=980, left(rank 1)=981, right(rank 1)=981
+[17-51-08] Rank 1 (PID 26510): my counter=983, left(rank 0)=982, right(rank 0)=982
+[17-51-08] Rank 0 (PID 26509): my counter=982, left(rank 1)=983, right(rank 1)=983
+[17-51-09] Rank 1 (PID 26510): my counter=985, left(rank 0)=984, right(rank 0)=984
+[17-51-09] Rank 0 (PID 26509): my counter=984, left(rank 1)=985, right(rank 1)=985
+[17-51-10] Rank 1 (PID 26510): my counter=987, left(rank 0)=986, right(rank 0)=986
+[17-51-10] Rank 0 (PID 26509): my counter=986, left(rank 1)=987, right(rank 1)=987
+[17-51-11] Rank 0 (PID 26509): my counter=988, left(rank 1)=989, right(rank 1)=989
+[17-51-11] Rank 1 (PID 26510): my counter=989, left(rank 0)=988, right(rank 0)=988
+Rank 0: Checkpoint saved (counter = 990) to checkpoint_rank0.dat
+Rank 1: Checkpoint saved (counter = 991) to checkpoint_rank1.dat
+[17-51-12] Rank 0 (PID 26509): my counter=990, left(rank 1)=991, right(rank 1)=991
+[17-51-12] Rank 1 (PID 26510): my counter=991, left(rank 0)=990, right(rank 0)=990
+[17-51-13] Rank 0 (PID 26509): my counter=992, left(rank 1)=993, right(rank 1)=993
+[17-51-13] Rank 1 (PID 26510): my counter=993, left(rank 0)=992, right(rank 0)=992
+[17-51-14] Rank 0 (PID 26509): my counter=994, left(rank 1)=995, right(rank 1)=995
+[17-51-14] Rank 1 (PID 26510): my counter=995, left(rank 0)=994, right(rank 0)=994
+[17-51-15] Rank 0 (PID 26509): my counter=996, left(rank 1)=997, right(rank 1)=997
+[17-51-15] Rank 1 (PID 26510): my counter=997, left(rank 0)=996, right(rank 0)=996
+[17-51-16] Rank 1 (PID 26510): my counter=999, left(rank 0)=998, right(rank 0)=998
+[17-51-16] Rank 0 (PID 26509): my counter=998, left(rank 1)=999, right(rank 1)=999
+Rank 1: Checkpoint saved (counter = 1001) to checkpoint_rank1.dat
+Rank 0: Checkpoint saved (counter = 1000) to checkpoint_rank0.dat
+=== Job completed successfully! ===

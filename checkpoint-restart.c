@@ -61,6 +61,9 @@ int main(int argc, char **argv)
 
     int counter = restore_checkpoint(rank);
 
+    if (counter == 0) {
+        counter = rank;
+    }
     pid_t pid = getpid();
     char time_str[10];
     get_time_str(time_str, sizeof(time_str));
@@ -69,8 +72,7 @@ int main(int argc, char **argv)
            time_str, rank, (unsigned long)pid, counter);
     fflush(stdout);
 
-    int i = 0;
-    while (i < 1000) {
+    while (counter < 1000) {
         int left_counter  = 0;
         int right_counter = 0;
         MPI_Status status;
@@ -97,18 +99,17 @@ int main(int argc, char **argv)
         }
         
         get_time_str(time_str, sizeof(time_str));
-        printf("[%s] Step: %d Time: %d Rank %d (PID %lu): my counter=%d, left(rank %d)=%d, right(rank %d)=%d\n", 
-            time_str, i, rank, (unsigned long)pid, counter, left, left_counter, right, right_counter);
+        printf("[%s] Rank %d (PID %lu): my counter=%d, left(rank %d)=%d, right(rank %d)=%d\n", 
+            time_str, rank, (unsigned long)pid, counter, left, left_counter, right, right_counter);
         fflush(stdout);
 
-        counter++;
+        counter+=size;
 
-        if (counter % SAVE_STEP == 0) {
+        if ((counter - rank) % SAVE_STEP == 0) {
             checkpoint(rank, counter);
         }
 
         sleep(COMPUTATION_TIME);
-        i++;
     }
 
     MPI_Finalize();
