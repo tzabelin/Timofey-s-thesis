@@ -36,6 +36,7 @@ hostfile
 Thumbs.db
 
 openmpi-ulfm/
+Realtime/openmpi*
 
 #Ignore gnuplots
 *.png
