@@ -6,7 +6,7 @@
 #include <sys/stat.h>
 #include <time.h>
 
-#define COMPUTATION_TIME 10
+#define COMPUTATION_TIME 5
 #define SAVE_STEP        10
 #define DISK_LATENCY     50
 #define FAILURE_RATE     0.2
@@ -91,44 +91,46 @@ int main(int argc, char **argv) {
         if (failed_global > 0) {
             restore_checkpoint(rank, &dummy_time, &counter, &last_checkpoint, out);
         }
-
+        else
         {
-            MPI_Status status;
-            int err;
-            int left_counter  = 0;
-            int right_counter = 0;
+            {
+                MPI_Status status;
+                int err;
+                int left_counter  = 0;
+                int right_counter = 0;
 
-            err = MPI_Sendrecv(&counter, 1, MPI_INT, right, 0,
-                               &left_counter, 1, MPI_INT, left, 0,
-                               comm, &status);
-            if (err != MPI_SUCCESS) {
-                fprintf(out, "Rank %d detected a failure in Sendrecv (left). Aborting job...\n", rank);
+                err = MPI_Sendrecv(&counter, 1, MPI_INT, right, 0,
+                                &left_counter, 1, MPI_INT, left, 0,
+                                comm, &status);
+                if (err != MPI_SUCCESS) {
+                    fprintf(out, "Rank %d detected a failure in Sendrecv (left). Aborting job...\n", rank);
+                    fflush(out);
+                    MPI_Abort(comm, 99);
+                    exit(1);
+                }
+
+                err = MPI_Sendrecv(&counter, 1, MPI_INT, left, 1,
+                                &right_counter, 1, MPI_INT, right, 1,
+                                comm, &status);
+                if (err != MPI_SUCCESS) {
+                    fprintf(out, "Rank %d detected a failure in Sendrecv (right). Aborting job...\n", rank);
+                    fflush(out);
+                    MPI_Abort(comm, 99);
+                    exit(1);
+                }
+
+                get_time_str(time_str_buf, sizeof(time_str_buf), dummy_time);
+                fprintf(out, "[%s] Rank %d (PID %lu): my counter=%d, left(rank %d)=%d, right(rank %d)=%d\n",
+                        time_str_buf, rank, (unsigned long)getpid(),
+                        counter, left, left_counter, right, right_counter);
                 fflush(out);
-                MPI_Abort(comm, 99);
-                exit(1);
             }
 
-            err = MPI_Sendrecv(&counter, 1, MPI_INT, left, 1,
-                               &right_counter, 1, MPI_INT, right, 1,
-                               comm, &status);
-            if (err != MPI_SUCCESS) {
-                fprintf(out, "Rank %d detected a failure in Sendrecv (right). Aborting job...\n", rank);
-                fflush(out);
-                MPI_Abort(comm, 99);
-                exit(1);
+            counter += size;
+
+            if ((counter - rank) % SAVE_STEP == 0) {
+                checkpoint(rank, counter, &dummy_time, &last_checkpoint, out);
             }
-
-            get_time_str(time_str_buf, sizeof(time_str_buf), dummy_time);
-            fprintf(out, "[%s] Rank %d (PID %lu): my counter=%d, left(rank %d)=%d, right(rank %d)=%d\n",
-                    time_str_buf, rank, (unsigned long)getpid(),
-                    counter, left, left_counter, right, right_counter);
-            fflush(out);
-        }
-
-        counter += size;
-
-        if ((counter - rank) % SAVE_STEP == 0) {
-            checkpoint(rank, counter, &dummy_time, &last_checkpoint, out);
         }
     }
 
