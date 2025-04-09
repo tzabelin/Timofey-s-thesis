@@ -1,0 +1,6 @@
+heat_mpi
+*.o
+*.dat
+*.png
+*.out
+!/figs/*.png
