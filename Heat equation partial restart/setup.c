@@ -9,12 +9,14 @@
 
 #include "heat.h"
 #include "pngwriter.h"
+#include "fault.h"
 
-#define NSTEPS 500  // Default number of iteration steps
+#define NSTEPS 1000  // Default number of iteration steps
+
 
 /* Initialize the heat equation solver */
 void initialize(int argc, char *argv[], field *current,
-                field *previous, int *nsteps, parallel_data *parallel, 
+                field *previous, int *nsteps, neighbor_data_buffers *neighbor_checkpoint_buffers, parallel_data *parallel, 
                 int *iter0)
 {
     /*
@@ -26,8 +28,8 @@ void initialize(int argc, char *argv[], field *current,
      */
 
 
-    int rows = 2000;             //!< Field dimensions with default values
-    int cols = 2000;
+    rows = 2000;             //!< Field dimensions with default values
+    cols = 2000;
 
     //TP: multiply by two for a safety factor
     char input_file[64*2];        //!< Name of the optional input file
@@ -66,38 +68,100 @@ void initialize(int argc, char *argv[], field *current,
         exit(-1);
     }
 
-   // Check if checkpoint exists
-    if (!access(CHECKPOINT, F_OK)) {
-        read_restart(current, parallel, iter0);
-        set_field_dimensions(previous, current->nx_full, current->ny_full,
-                             parallel);
-        allocate_field(previous);
+   //HERE WAS CODE FOR READING THE CHECKPOINT. I CHANGED IT.
+    MPI_Comm parent_comm;
+    MPI_Comm_get_parent(&parent_comm);
 
-        if (parallel->rank == 0)
-            printf("Restarting from an earlier checkpoint (HEAT_RESTART.dat) saved"
-                   " at iteration %d.  nsteps=%d.  Ignoring any other arguments.\n", *iter0, *nsteps);
-        copy_field(current, previous);
-    } else if (read_file) {
-        if (access(input_file, F_OK)) {
-            // File is NOT accessibe.  Check in io.c seems to make an error.
-            if (parallel->rank == 0) { // note: rank is not set yet, prints from every rank.
-                printf("Error: Input file %s is not accessible.\n", input_file);
-                fflush(stdout);
-            }
-            exit(-1);
+    if (parent_comm != MPI_COMM_NULL) {
+        int rank; // Rank within the group of newly spawned processes
+        MPI_Comm_rank(MPI_COMM_WORLD, &rank); // Just to put a number in rank
+        printf("[Spawned Rank %d] Detected parent communicator. Participating in recovery.\n", rank);
+
+        MPI_Comm new_comm, reordered_comm;
+        int parent_size, new_rank, new_size, num_failed;
+        int *failed_ranks = NULL;
+        int my_original_rank = -1;
+        int rc;
+
+        // 1. Get size of parent group (survivors) for later
+        rc = MPI_Comm_remote_size(parent_comm, &parent_size);
+        if (rc != MPI_SUCCESS) { fprintf(stderr, "[Spawned Rank %d] Error getting parent size: %d\n", rank, rc); MPI_Abort(MPI_COMM_WORLD, rc); }
+
+        rc = MPI_Intercomm_merge(parent_comm, 1 /* high */, &new_comm);
+        if (rc != MPI_SUCCESS) { fprintf(stderr, "[Spawned Rank %d] Error merging communicator: %d\n", rank, rc); MPI_Abort(MPI_COMM_WORLD, rc); }
+        MPI_Comm_free(&parent_comm); // Don't need the intercomm anymore
+
+        MPI_Comm_rank(new_comm, &new_rank);
+        MPI_Comm_size(new_comm, &new_size);
+        printf("[Spawned Rank %d -> %d/%d in merged] Merge successful.\n", rank, new_rank, new_size);
+
+        // Receive list of original failed ranks from leader (rank 0 in new_comm)
+        num_failed = new_size - parent_size;
+        if (num_failed <= 0) {
+             fprintf(stderr, "[Spawned Rank %d -> %d/%d] Error: num_failed (%d) is not positive after merge.\n", rank, new_rank, new_size, num_failed);
+             MPI_Abort(MPI_COMM_WORLD, 1);
         }
-        read_field(current, previous, input_file, parallel);
-        if (parallel->rank == 0)
-            printf("Read %s, running %d steps.\n", input_file, *nsteps);
-    } else {
-        parallel_setup(parallel, rows, cols);
-        if (parallel->rank == 0)
-            printf("Generating default data from: rows, columns, nsteps: %d, %d, %d\n", rows, cols, *nsteps);
+        failed_ranks = (int*)malloc(num_failed * sizeof(int));
+        if (!failed_ranks) { MPI_Abort(MPI_COMM_WORLD, 1); }
+
+        rc = MPI_Bcast(failed_ranks, num_failed, MPI_INT, 0, new_comm); // Rank 0 in new_comm is the survivor leader
+        if (rc != MPI_SUCCESS) { fprintf(stderr, "[Spawned Rank %d -> %d/%d] Error receiving failed ranks: %d\n", rank, new_rank, new_size, rc); MPI_Abort(MPI_COMM_WORLD, rc); }
+        printf("[Spawned Rank %d -> %d/%d] Received %d failed ranks.\n", rank, new_rank, new_size, num_failed);
+
+        // Determine original rank
+        int my_spawn_index = new_rank - parent_size; // Index among the spawned processes (0-based)
+        if (my_spawn_index < 0 || my_spawn_index >= num_failed) {
+            fprintf(stderr, "[Spawned Rank %d -> %d/%d] Error: Invalid spawn index %d (num_failed=%d)\n", rank, new_rank, new_size, my_spawn_index, num_failed);
+            MPI_Abort(MPI_COMM_WORLD, 1);
+        }
+        my_original_rank = failed_ranks[my_spawn_index];
+        printf("[Spawned Rank %d -> %d/%d] My target original rank is %d.\n", rank, new_rank, new_size, my_original_rank);
+        free(failed_ranks); // Don't need this anymore
+
+        rc = MPI_Comm_split(new_comm, 0 /* color */, my_original_rank /* key */, &reordered_comm);
+        if (rc != MPI_SUCCESS) { fprintf(stderr, "[Spawned Rank %d -> %d/%d] Error splitting communicator: %d\n", rank, new_rank, new_size, rc); MPI_Abort(MPI_COMM_WORLD, rc); }
+        MPI_Comm_free(&new_comm); // Don't need the merged comm anymore
+
+        int final_rank, final_size;
+        MPI_Comm_rank(reordered_comm, &final_rank);
+        MPI_Comm_size(reordered_comm, &final_size);
+        if(final_rank != my_original_rank) {
+             fprintf(stderr, "[Spawned Rank %d -> %d/%d] *** ERROR ***: Final rank %d does not match target original rank %d after split!\n", rank, new_rank, new_size, final_rank, my_original_rank);
+             MPI_Abort(MPI_COMM_WORLD, 1);
+        }
+        printf("[Spawned Rank %d -> %d/%d] Split successful. Final Rank %d/%d.\n", rank, new_rank, new_size, final_rank, final_size);
+
+        // Now setup the parallel structure with the correct communicator and dimensions
+        printf("[Spawned Rank %d] Setting up parallel structure with new dimensions: rows=%d, cols=%d\n", final_rank, rows, cols);
+        parallel_setup(parallel, rows, cols, reordered_comm);
+
+        // Idk what happened, abort
+         if(parallel->rank != final_rank || parallel->size != final_size) {
+             fprintf(stderr, "[Rank %d] *** ERROR ***: Parallel structure rank/size (%d/%d) mismatch final comm (%d/%d)!\n", final_rank, parallel->rank, parallel->size, final_rank, final_size);
+             MPI_Abort(MPI_COMM_WORLD, 1);
+         }
+
         set_field_dimensions(current, rows, cols, parallel);
         set_field_dimensions(previous, rows, cols, parallel);
         generate_field(current, parallel);
         allocate_field(previous);
         copy_field(current, previous);
+
+
+        printf("[Rank %d] Initialization complete for spawned process.\n", final_rank);
+        
+        initialize_neighbor_buffers(parallel, neighbor_checkpoint_buffers);
+        process_restart(current, parallel, iter0, neighbor_checkpoint_buffers, 1);
+    } else {
+        parallel_setup(parallel, rows, cols, MPI_COMM_WORLD);
+        if (parallel->rank == 0)
+            printf("Generating default data from: rows, columns, nsteps: %d, %d\n", rows, cols);
+        set_field_dimensions(current, rows, cols, parallel);
+        set_field_dimensions(previous, rows, cols, parallel);
+        generate_field(current, parallel);
+        allocate_field(previous);
+        copy_field(current, previous);
+        initialize_neighbor_buffers(parallel, neighbor_checkpoint_buffers);
     }
 }
 
@@ -190,7 +254,7 @@ void set_field_dimensions(field *temperature, int nx, int ny,
     temperature->ny_full = ny;
 }
 
-void parallel_setup(parallel_data *parallel, int nx, int ny)
+void parallel_setup(parallel_data *parallel, int nx, int ny, MPI_Comm comm)
 {
     int nx_local;
     int ny_local;
@@ -199,7 +263,7 @@ void parallel_setup(parallel_data *parallel, int nx, int ny)
     int periods[2] = { 0, 0 };
 
     /* Set grid dimensions */
-    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+    MPI_Comm_size(comm, &world_size);
     MPI_Dims_create(world_size, 2, dims);
     nx_local = nx / dims[0];
     ny_local = ny / dims[1];
@@ -208,28 +272,30 @@ void parallel_setup(parallel_data *parallel, int nx, int ny)
         printf("Cannot divide grid evenly to processors in x-direction "
                "%d x %d != %d\n", nx_local, dims[0], nx);
         fflush(stdout);
-        MPI_Abort(MPI_COMM_WORLD, -2);
+        MPI_Abort(comm, -2);
     }
     if (ny_local * dims[1] != ny) {
         printf("Cannot divide grid evenly to processors in y-direction "
                "%d x %d != %d\n", ny_local, dims[1], ny);
         fflush(stdout);
-        MPI_Abort(MPI_COMM_WORLD, -2);
+        MPI_Abort(comm, -2);
     }
 
     /* Create cartesian communicator */
-    MPI_Cart_create(MPI_COMM_WORLD, 2, dims, periods, 1, &parallel->comm);
+    MPI_Barrier(comm);
+    MPI_Cart_create(comm, 2, dims, periods, 1, &parallel->comm);
     MPI_Cart_shift(parallel->comm, 0, 1, &parallel->nup, &parallel->ndown);
     MPI_Cart_shift(parallel->comm, 1, 1, &parallel->nleft,
                    &parallel->nright);
 
     MPI_Comm_size(parallel->comm, &parallel->size);
     MPI_Comm_rank(parallel->comm, &parallel->rank);
+    printf("Rank %d: Setting up parallel environment\n", parallel->rank);
 
-    if (parallel->rank == 0) {
-        printf("Using domain decomposition %d x %d\n", dims[0], dims[1]);
-        printf("Local domain size %d x %d\n", nx_local, ny_local);
-    }
+    //if (parallel->rank == 0) {
+        printf("Rank %d Using domain decomposition %d x %d\n", parallel->rank, dims[0], dims[1]);
+        printf("Rank %d Local domain size %d x %d\n", parallel->rank, nx_local, ny_local);
+    //}
 
     /* Create datatypes for halo exchange */
     MPI_Type_vector(nx_local + 2, 1, ny_local + 2, MPI_DOUBLE,
@@ -298,7 +364,7 @@ void parallel_setup(parallel_data *parallel, int nx, int ny)
     MPI_Type_create_subarray(2, sizes, subsizes, offsets, MPI_ORDER_C,
                              MPI_DOUBLE, &parallel->restarttype);
     MPI_Type_commit(&parallel->restarttype);
-
+    set_error_handler(parallel->comm);
 }
 
 /* Deallocate the 2D arrays of temperature fields */

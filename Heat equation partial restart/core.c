@@ -7,46 +7,76 @@
 #include <mpi.h>
 #include "heat.h"
 
+int rows, cols;
+
 /* Exchange the boundary values */
-void exchange_init(field *temperature, parallel_data *parallel)
+//CHANGED now returns error code because we dont want to continue calculations if any of the processes failed, and we cant prevent further exchange from error handler
+int exchange_init(field *temperature, parallel_data *parallel)
 {
-    int ind, width;
+    int ind, width, rc;
     width = temperature->ny + 2;
     // Send to the up, receive from down
     ind = idx(1, 0, width);
-    MPI_Isend(&temperature->data[ind], 1, parallel->rowtype,
+    rc = MPI_Isend(&temperature->data[ind], 1, parallel->rowtype,
               parallel->nup, 11, parallel->comm, &parallel->requests[0]);
     ind = idx(temperature->nx + 1, 0, width);
-    MPI_Irecv(&temperature->data[ind], 1, parallel->rowtype, 
+    rc = MPI_Irecv(&temperature->data[ind], 1, parallel->rowtype, 
               parallel->ndown, 11, parallel->comm, &parallel->requests[1]);
+
     // Send to the down, receive from up
     ind = idx(temperature->nx, 0, width);
-    MPI_Isend(&temperature->data[ind], 1, parallel->rowtype, 
+    rc = MPI_Isend(&temperature->data[ind], 1, parallel->rowtype, 
               parallel->ndown, 12, parallel->comm, &parallel->requests[2]);
     ind = idx(0, 0, width);
-    MPI_Irecv(&temperature->data[ind], 1, parallel->rowtype,
+    rc = MPI_Irecv(&temperature->data[ind], 1, parallel->rowtype,
               parallel->nup, 12, parallel->comm, &parallel->requests[3]);
+
     // Send to the left, receive from right
     ind = idx(0, 1, width);
-    MPI_Isend(&temperature->data[ind], 1, parallel->columntype,
-              parallel->nleft, 13, parallel->comm, &parallel->requests[4]); 
+    rc = MPI_Isend(&temperature->data[ind], 1, parallel->columntype,
+              parallel->nleft, 13, parallel->comm, &parallel->requests[4]);
     ind = idx(0, temperature->ny + 1, width);
-    MPI_Irecv(&temperature->data[ind], 1, parallel->columntype, 
-              parallel->nright, 13, parallel->comm, &parallel->requests[5]); 
+    rc = MPI_Irecv(&temperature->data[ind], 1, parallel->columntype, 
+              parallel->nright, 13, parallel->comm, &parallel->requests[5]);
+              
     // Send to the right, receive from left
     ind = idx(0, temperature->ny, width);
-    MPI_Isend(&temperature->data[ind], 1, parallel->columntype,
+    rc = MPI_Isend(&temperature->data[ind], 1, parallel->columntype,
               parallel->nright, 14, parallel->comm, &parallel->requests[7]);
     ind = 0;
-    MPI_Irecv(&temperature->data[ind], 1, parallel->columntype,
+    rc = MPI_Irecv(&temperature->data[ind], 1, parallel->columntype,
               parallel->nleft, 14, parallel->comm, &parallel->requests[6]);
 
 }
 
+//CHANGED
 /* complete the non-blocking communication */
-void exchange_finalize(parallel_data *parallel)
+int exchange_finalize(parallel_data *parallel)
 {
-    MPI_Waitall(8, &parallel->requests[0], MPI_STATUSES_IGNORE);
+    MPI_Status statuses[8];
+    int rc = MPI_Waitall(8, &parallel->requests[0], statuses);
+    if (rc != MPI_SUCCESS)
+    {
+        int specific_error = MPI_SUCCESS;
+        for (int i = 0; i < 8; i++) {
+            if (statuses[i].MPI_ERROR != MPI_SUCCESS)
+            {
+                char error_string[MPI_MAX_ERROR_STRING];
+                int len;
+                MPI_Error_string(statuses[i].MPI_ERROR, error_string, &len);
+
+                fprintf(stderr, "Rank %d: Request %d (requests[%d]) failed with error %d: %s\n",
+                        parallel->rank, i, i, statuses[i].MPI_ERROR, error_string);
+                if (specific_error == MPI_SUCCESS) {
+                    specific_error = statuses[i].MPI_ERROR;
+                }
+            }
+        }
+
+        error_handler(&parallel->comm, &specific_error);
+        return specific_error;
+    }
+    return MPI_SUCCESS;
 }
 
 /* Update the temperature values using five-point stencil */

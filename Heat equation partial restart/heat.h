@@ -1,6 +1,6 @@
 #ifndef __HEAT_H__
 #define __HEAT_H__
-
+#pragma once
 
 /* Datatype for temperature field */
 typedef struct {
@@ -29,6 +29,22 @@ typedef struct {
     MPI_Datatype filetype;     /* MPI Datatype for file view in restart I/O */
 } parallel_data;
 
+//CHANGEd
+typedef struct {
+    double *up;
+    double *down;
+    double *left;
+    double *right;
+    double *self;
+    void *raw_ptr_up;
+    void *raw_ptr_down;
+    void *raw_ptr_left;
+    void *raw_ptr_right;
+    void *raw_ptr_self_buffer;
+    MPI_Aint extent;
+    int iteration;
+    int nx_full, ny_full;
+} neighbor_data_buffers;
 
 /* We use here fixed grid spacing */
 #define DX 0.01
@@ -36,6 +52,8 @@ typedef struct {
 
 /* file name for restart checkpoints*/
 #define CHECKPOINT "HEAT_RESTART.dat"
+
+extern int rows, cols; //Damn global var
 
 /* Inline function for indexing the 2D arrays */
 static inline int idx(int i, int j, int width)
@@ -51,17 +69,17 @@ void free_2d(double *array);
 void set_field_dimensions(field *temperature, int nx, int ny,
                           parallel_data *parallel);
 
-void parallel_setup(parallel_data *parallel, int nx, int ny);
+void parallel_setup(parallel_data *parallel, int nx, int ny, MPI_Comm comm); //CHANGED 
 
-void initialize(int argc, char *argv[], field *temperature1,
-                field *temperature2, int *nsteps, parallel_data *parallel,
-                int *iter0);
+void initialize(int argc, char *argv[], field *current,
+    field *previous, int *nsteps, neighbor_data_buffers *neighbor_checkpoint_buffers, parallel_data *parallel, 
+    int *iter0); //ChaNGED
 
 void generate_field(field *temperature, parallel_data *parallel);
 
-void exchange_init(field *temperature, parallel_data *parallel);
+int exchange_init(field *temperature, parallel_data *parallel); //CHANGED, look core.c
 
-void exchange_finalize(parallel_data *parallel);
+int exchange_finalize(parallel_data *parallel); //CHANGED, look core,c
 
 void evolve_interior(field *curr, field *prev, double a, double dt);
 

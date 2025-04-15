@@ -79,7 +79,7 @@ void read_field(field *temperature1, field *temperature2, char *filename,
         MPI_Abort(MPI_COMM_WORLD, -1);
     }
 
-    parallel_setup(parallel, nx, ny);
+    parallel_setup(parallel, nx, ny, MPI_COMM_WORLD);
     set_field_dimensions(temperature1, nx, ny, parallel);
     set_field_dimensions(temperature2, nx, ny, parallel);
 
@@ -187,7 +187,7 @@ void read_restart(field *temperature, parallel_data *parallel, int *iter)
     MPI_File_read_all(fp, &ny, 1, MPI_INT, MPI_STATUS_IGNORE);
     MPI_File_read_all(fp, iter, 1, MPI_INT, MPI_STATUS_IGNORE);
     // set correct dimensions to MPI metadata
-    parallel_setup(parallel, nx, ny);
+    parallel_setup(parallel, nx, ny, MPI_COMM_WORLD);
     // set local dimensions and allocate memory for the data
     set_field_dimensions(temperature, nx, ny, parallel);
     allocate_field(temperature);
