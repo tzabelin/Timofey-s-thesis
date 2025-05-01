@@ -4,6 +4,7 @@
 #include <mpi-ext.h>
 #include <unistd.h>
 #include <string.h>
+#include <time.h> 
 
 #define RECOVERY_TAG 99
 #define MAP_TAG 100
@@ -100,7 +101,7 @@ int run_ring(MPI_Comm comm)
     left  = global_map[(global_id - 1 + total_global_procs) % total_global_procs];
     right = global_map[(global_id + 1) % total_global_procs];
 
-    while (counter < 50 * total_global_procs)
+    while (counter < 100 * total_global_procs)
     {
         int send_value = counter;
         int recv_from_left, recv_from_right;
@@ -122,9 +123,14 @@ int run_ring(MPI_Comm comm)
             save_right_neighbor = recv_from_right;
             global_counter = counter;
         }
-        printf("Rank %d (global_id %d): counter=%d, left_neighbor=%d, right_neighbor=%d\n",
-               rank, global_id, counter, save_left_neighbor, save_right_neighbor);
+        time_t now = time(NULL);
+        struct tm *t = localtime(&now);
+        char time_str[10];
+        strftime(time_str, sizeof(time_str), "%H:%M:%S", t);
+        printf("%s - Rank %d (global_id %d): counter=%d, left_neighbor=%d, right_neighbor=%d\n",
+               time_str, rank, global_id, counter, save_left_neighbor, save_right_neighbor);
         fflush(stdout);
+        sleep(5);
         counter += total_global_procs;
         sleep(1);
     }

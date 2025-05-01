@@ -18,7 +18,7 @@ do
     if [ "$should_kill" -eq 1 ]; then
         pids=( $(pgrep -f "partial-restart.out") )
         if [ ${#pids[@]} -gt 0 ]; then
-            kill_pid=${pids[0]}
+            kill_pid=${pids[2]}
             echo "[KILLER] Killing process PID=$kill_pid"
             kill -9 "$kill_pid"
         fi
